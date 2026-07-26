@@ -230,3 +230,17 @@ p{margin:0 0 18px}
 .presentation-support h3{font-size:clamp(1.65rem,3vw,2.5rem);margin:6px 0 10px;line-height:1.04}
 .presentation-support p{color:var(--muted);max-width:720px;margin:0}
 @media(max-width:760px){.presentation-support{flex-direction:column;align-items:flex-start}.presentation-support .button{width:100%;text-align:center}}
+
+.about-photo{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg,rgba(23,33,29,.02) 42%,rgba(23,33,29,.82) 100%),
+    url("micheal-sheehy-headshot.jpg") center 22% / cover no-repeat;
+}
+.about-photo .quote{
+  position:relative;
+  z-index:1;
+  max-width:90%;
+  text-shadow:0 2px 14px rgba(0,0,0,.35);
+}
