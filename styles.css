@@ -244,3 +244,66 @@ p{margin:0 0 18px}
   max-width:90%;
   text-shadow:0 2px 14px rgba(0,0,0,.35);
 }
+
+
+/* V18 adaptive compliance hero refinement */
+.volume-panel{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  align-items:flex-end;
+  justify-content:flex-start;
+  padding:2.2rem;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(177,196,69,.50) 0, rgba(177,196,69,.18) 16%, rgba(177,196,69,0) 40%),
+    linear-gradient(90deg, rgba(20,31,28,.70) 0%, rgba(10,26,22,.20) 44%, rgba(9,21,19,.82) 100%),
+    linear-gradient(180deg, #1a2a25 0%, #081714 100%);
+}
+.volume-panel::before{
+  content:"";
+  position:absolute;
+  inset:-6% auto -10% -8%;
+  width:78%;
+  background:
+    radial-gradient(circle at 18% 20%, transparent 0 8%, rgba(199,212,111,.16) 8.3% 8.8%, transparent 9.1% 12%, rgba(199,212,111,.14) 12.3% 12.8%, transparent 13.1% 16%, rgba(199,212,111,.10) 16.3% 16.8%, transparent 17.1% 20%, rgba(199,212,111,.08) 20.3% 20.8%, transparent 21.1% 24%, rgba(199,212,111,.06) 24.3% 24.8%, transparent 25.1% 100%);
+  opacity:.95;
+  pointer-events:none;
+}
+.volume-panel::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 88% 74%, rgba(177,196,69,.10) 0 0.22rem, transparent 0.25rem) 0 0/1.1rem 1.1rem,
+    linear-gradient(115deg, transparent 0 55%, rgba(177,196,69,.12) 56%, transparent 57%) right 12% top 20%/38% 30% no-repeat,
+    linear-gradient(115deg, transparent 0 60%, rgba(177,196,69,.08) 61%, transparent 62%) right 6% bottom 20%/46% 40% no-repeat;
+  opacity:.55;
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+.volume-panel span{
+  position:relative;
+  z-index:1;
+  display:block;
+  max-width:none;
+  white-space:nowrap;
+  font-size:clamp(3rem, 6vw, 5.5rem);
+  line-height:.95;
+  letter-spacing:-.03em;
+}
+
+
+/* V19 explicit artwork for Adaptive Compliance manuscript card */
+.volume-panel{position:relative;overflow:hidden;isolation:isolate;align-items:flex-end;justify-content:flex-start;padding:2.2rem 2rem;background:linear-gradient(90deg, rgba(15,28,24,.92) 0%, rgba(10,26,22,.86) 55%, rgba(9,21,19,.92) 100%);} 
+.volume-panel::before,.volume-panel::after{display:none !important;content:none !important;}
+.volume-art{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.95;pointer-events:none;}
+.volume-panel .volume-label{position:relative;z-index:2;display:block;white-space:nowrap;font-family:Georgia,serif;font-size:clamp(3.2rem,5.6vw,5.3rem);line-height:.95;letter-spacing:-.03em;color:#f5f4ef;text-shadow:0 8px 22px rgba(0,0,0,.28);} 
+
+
+/* V20 manuscript preview image */
+.manuscript-preview{position:relative;overflow:hidden;min-height:390px;background:#10211b;padding:0 !important;}
+.manuscript-preview::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,12,10,.08) 0%, rgba(5,12,10,.14) 42%, rgba(5,12,10,.28) 100%);z-index:1;pointer-events:none;}
+.manuscript-preview .volume-preview-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block;z-index:0;}
+.manuscript-preview .volume-badge{position:absolute;left:28px;bottom:24px;z-index:2;display:inline-flex;align-items:center;padding:.7rem 1rem;border-radius:999px;background:rgba(8,23,20,.78);border:1px solid rgba(245,244,239,.18);backdrop-filter: blur(4px);color:#f5f4ef;font-family:Georgia,serif;font-size:1.4rem;line-height:1;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.22);}
+/* disable prior art treatment when preview image is used */
+.manuscript-preview .volume-art,.manuscript-preview .volume-label{display:none !important;}
