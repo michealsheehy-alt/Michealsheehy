@@ -307,3 +307,10 @@ p{margin:0 0 18px}
 .manuscript-preview .volume-badge{position:absolute;left:28px;bottom:24px;z-index:2;display:inline-flex;align-items:center;padding:.7rem 1rem;border-radius:999px;background:rgba(8,23,20,.78);border:1px solid rgba(245,244,239,.18);backdrop-filter: blur(4px);color:#f5f4ef;font-family:Georgia,serif;font-size:1.4rem;line-height:1;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.22);}
 /* disable prior art treatment when preview image is used */
 .manuscript-preview .volume-art,.manuscript-preview .volume-label{display:none !important;}
+
+
+/* V21 Topic 2 preview image */
+.topic-two-preview{position:relative;overflow:hidden;min-height:390px;background:#0f1f1a;padding:0 !important;}
+.topic-two-preview::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(5,12,10,.04) 0%, rgba(5,12,10,.14) 55%, rgba(5,12,10,.26) 100%);z-index:1;pointer-events:none;}
+.topic-two-preview .topic-two-preview-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block;z-index:0;}
+.topic-two-preview .topic-two-badge{position:absolute;left:28px;bottom:24px;z-index:2;display:inline-flex;align-items:center;padding:.7rem 1rem;border-radius:999px;background:rgba(8,23,20,.8);border:1px solid rgba(245,244,239,.18);backdrop-filter: blur(4px);color:#f5f4ef;font-family:Georgia,serif;font-size:1.4rem;line-height:1;letter-spacing:-.02em;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.22);}
