@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+<title id="title">The End of Rules Alone visual</title>
+<desc id="desc">A rigid rules grid evolving into an adaptive intelligence network.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18231e"/><stop offset="1" stop-color="#315041"/></linearGradient>
+  <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5ef47"/><stop offset="1" stop-color="#9fbd2d"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#0b1410" flood-opacity=".28"/></filter>
+</defs>
+<rect width="760" height="480" rx="34" fill="url(#bg)"/>
+<g opacity=".24" stroke="#dfe8e1" stroke-width="2">
+  <path d="M55 80H330M55 135H330M55 190H330M55 245H330M55 300H330M55 355H330"/>
+  <path d="M80 55V380M135 55V380M190 55V380M245 55V380M300 55V380"/>
+</g>
+<g fill="#f6f3e9">
+  <circle cx="80" cy="80" r="8"/><circle cx="135" cy="135" r="8"/><circle cx="190" cy="190" r="8"/><circle cx="245" cy="245" r="8"/><circle cx="300" cy="300" r="8"/>
+</g>
+<path d="M330 245 C405 245 405 122 486 122 S585 196 676 105 M330 245 C410 245 424 350 510 350 S590 300 686 374 M330 245 C422 245 460 239 548 239 S627 239 700 239" fill="none" stroke="url(#lime)" stroke-width="8" stroke-linecap="round"/>
+<g fill="#d5ef47" stroke="#18231e" stroke-width="6" filter="url(#shadow)">
+  <circle cx="486" cy="122" r="20"/><circle cx="676" cy="105" r="18"/><circle cx="510" cy="350" r="20"/><circle cx="686" cy="374" r="18"/><circle cx="548" cy="239" r="24"/><circle cx="700" cy="239" r="18"/>
+</g>
+<g font-family="Arial, sans-serif" fill="#f6f3e9">
+  <text x="55" y="430" font-size="18" font-weight="700" letter-spacing="3">RULES → INTELLIGENCE → ADAPTATION</text>
+</g>
+</svg>
