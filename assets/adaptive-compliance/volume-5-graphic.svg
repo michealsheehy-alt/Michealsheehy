@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">The Criminal Is Already in Production visual</title>
+  <desc id="desc">An AI-enabled criminal production loop adapts after each control decision while an adaptive defence interrupts the cycle.</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17211d"/><stop offset="1" stop-color="#42614f"/></linearGradient>
+    <linearGradient id="flow5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5ef47"/><stop offset="1" stop-color="#91aa2d"/></linearGradient>
+    <marker id="arrow5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#d5ef47"/></marker>
+  </defs>
+  <rect width="760" height="480" rx="34" fill="url(#bg5)"/>
+  <text x="380" y="54" fill="#d5ef47" font-family="Arial,sans-serif" font-size="14" font-weight="800" letter-spacing="2.4" text-anchor="middle">THE ADVERSARIAL PRODUCTION LOOP</text>
+  <g fill="none" stroke="url(#flow5)" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow5)">
+    <path d="M241 154H304"/><path d="M456 154H519"/><path d="M598 211V265"/><path d="M519 322H456"/><path d="M304 322H241"/><path d="M162 265V211"/>
+  </g>
+  <g>
+    <rect x="86" y="105" width="155" height="106" rx="19" fill="#f7f3e8"/><rect x="304" y="105" width="152" height="106" rx="19" fill="#e6efb0"/>
+    <rect x="519" y="105" width="155" height="106" rx="19" fill="#f7f3e8"/><rect x="519" y="265" width="155" height="106" rx="19" fill="#f7f3e8"/>
+    <rect x="304" y="265" width="152" height="106" rx="19" fill="#e6efb0"/><rect x="86" y="265" width="155" height="106" rx="19" fill="#f7f3e8"/>
+  </g>
+  <g fill="#18231e" font-family="Arial,sans-serif" font-size="16" font-weight="800" text-anchor="middle">
+    <text x="163" y="151">DATA &amp;</text><text x="163" y="174">TARGETS</text>
+    <text x="380" y="151">SYNTHETIC</text><text x="380" y="174">IDENTITY</text>
+    <text x="596" y="151">PERSONALISED</text><text x="596" y="174">DECEPTION</text>
+    <text x="596" y="311">ACCOUNT</text><text x="596" y="334">ACCESS</text>
+    <text x="380" y="311">FUND</text><text x="380" y="334">MOVEMENT</text>
+    <text x="163" y="311">LEARN &amp;</text><text x="163" y="334">ADAPT</text>
+  </g>
+  <circle cx="380" cy="238" r="28" fill="#17211d" stroke="#d5ef47" stroke-width="4"/>
+  <path d="M366 238l10 10 19-23" fill="none" stroke="#d5ef47" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="380" y="410" fill="#f6f3e9" font-family="Arial,sans-serif" font-size="19" font-weight="800" letter-spacing="1.1" text-anchor="middle">DEFENCE MUST LEARN FASTER</text>
+</svg>
