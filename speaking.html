@@ -1,16 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
   <meta content="Speaking topics, keynote themes and executive sessions from Micheal Sheehy." name="description"/>
-  <title>Speaking | Micheal Sheehy</title><link href="styles.css" rel="stylesheet"/>
+  <title>Speaking | Micheal Sheehy</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <style>
+    /* Speaking image gallery — July 2026 */
+    .speaking-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .speaking-gallery figure {
+      margin: 0;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 14px 36px rgba(7, 24, 39, 0.08);
+    }
+
+    .speaking-gallery .speaking-photo-main {
+      grid-column: 1 / -1;
+    }
+
+    .speaking-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .speaking-gallery figcaption {
+      padding: 14px 17px 16px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 750;
+      letter-spacing: 0.01em;
+    }
+
+    .speaking-image-note {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 720px) {
+      .speaking-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .speaking-gallery .speaking-photo-main {
+        grid-column: auto;
+      }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="index.html">Micheal Sheehy</a><button aria-label="Open navigation" class="mobile-toggle">☰</button><nav aria-label="Primary navigation" class="nav-links"><a href="about.html">About</a><a href="insights.html">Insights</a><a href="adaptive-compliance.html">Adaptive Compliance</a><a href="case-studies.html">Case Studies</a><a aria-current="page" href="speaking.html">Speaking</a><a href="media.html">Media</a><a href="now.html">Now</a><a href="contact.html">Connect</a></nav></div></header>
 <main>
   <section class="page-hero speaking-hero"><div class="container"><div class="eyebrow">Speaking &amp; Executive Sessions</div><h1>Practical perspectives from inside global payments.</h1><p class="lead">Micheal speaks with executive, regulatory and industry audiences about adaptive compliance, artificial intelligence, global payments, financial crime strategy and the capabilities required to manage risk at scale.</p><div class="button-row"><a class="button button-primary" href="contact.html">Invite Micheal to speak</a><a class="button button-secondary" href="media.html">View media appearances</a></div></div></section>
 
-  <section class="section speaking-photo-section"><div class="container"><div class="section-head"><div><div class="eyebrow">On stage</div><h2>Keynotes, panels and industry conversations.</h2></div><p>Conference speaking, fireside discussions and executive sessions across payments, fintech, artificial intelligence and financial crime.</p></div><figure class="speaking-collage"><img src="assets/speaking/speaking-engagements.png" alt="Micheal Sheehy speaking at payments and fintech conferences"/><figcaption>Speaking across keynote, panel and interview formats.</figcaption></figure></div></section>
+  <section class="section speaking-photo-section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">On stage</div><h2>Keynotes, panels and industry conversations.</h2></div>
+        <p>Conference speaking, fireside discussions and executive sessions across payments, fintech, artificial intelligence and financial crime.</p>
+      </div>
+
+      <div class="speaking-gallery">
+        <figure class="speaking-photo-main">
+          <img src="assets/speaking/micheal-sheehy-global-compliance-keynote.webp" alt="Micheal Sheehy delivering a keynote at a global compliance leadership summit" width="1448" height="1086" loading="eager" fetchpriority="high" decoding="async"/>
+          <figcaption>Global compliance leadership keynote</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/speaking/micheal-sheehy-conference-panel.webp" alt="Micheal Sheehy speaking during an executive conference panel" width="1448" height="1086" loading="lazy" decoding="async"/>
+          <figcaption>Executive panel discussion</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/speaking/micheal-sheehy-global-fintech-podium.webp" alt="Micheal Sheehy presenting from a podium on leadership in global fintech" width="1448" height="1086" loading="lazy" decoding="async"/>
+          <figcaption>Leadership in global fintech</figcaption>
+        </figure>
+      </div>
+      <p class="speaking-image-note">AI-created event visualizations based on approved reference images.</p>
+    </div>
+  </section>
 
   <section class="section section-soft"><div class="container speaking-grid"><div><div class="eyebrow">Signature keynotes</div><h2>Ideas designed to change the discussion.</h2><p class="lead">Each session combines a clear strategic argument with practical frameworks, operating examples and questions leaders can take back to their organizations.</p></div><div class="session-list"><article class="session"><div class="meta">Adaptive Compliance</div><h3>The End of Rules Alone</h3><p>Why static controls and periodic governance are no longer sufficient—and how compliance functions can build continuous intelligence, model oversight and organizational learning.</p></article><article class="session"><div class="meta">Payments &amp; Fintech</div><h3>The Compliance Advantage</h3><p>How mature compliance creates speed, trust, market access and better product design in payments and fintech.</p></article><article class="session"><div class="meta">AI &amp; Governance</div><h3>AI Will Not Replace Compliance. It Will Replace Static Governance.</h3><p>A practical discussion of human oversight, decision rights, model drift, accountability and the difference between automating work and governing intelligence.</p></article></div></div></section>
 
@@ -21,4 +99,5 @@
   <section class="section section-soft"><div class="container cta"><div><div class="eyebrow">Speaking enquiries</div><h2>Bring the conversation to your audience.</h2><p>For conferences, panels, podcasts, executive roundtables, board discussions and private leadership sessions.</p></div><a class="button button-primary" href="contact.html">Contact Micheal</a></div></section>
 </main>
 <footer class="footer"><div class="container footer-inner"><span>© 2026 Micheal Sheehy</span><span>Payments · Compliance · Adaptive Governance</span></div></footer><script src="script.js"></script>
-</body></html>
+</body>
+</html>
