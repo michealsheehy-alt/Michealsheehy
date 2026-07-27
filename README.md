@@ -1,17 +1,29 @@
-# Micheal Sheehy Website — Adaptive Compliance Implementation Update
+# Micheal Sheehy Website — Green Style Restoration
 
-This is the complete existing website package updated for the new Adaptive Compliance implementation edition.
+This package corrects the pages that were accidentally overwritten or reverted.
 
-## Updated
-- Volume I master manuscript link now points to the 86-page Implementation Edition.
-- All eight chapter cards link to the updated standalone chapter PDFs.
-- Every chapter includes a direct PowerPoint implementation-deck download.
-- The homepage Adaptive Compliance section now displays all eight chapters.
-- A combined implementation playbook download has been added.
+## Replace these files in the existing GitHub repository
 
-## New asset paths
-- `assets/adaptive-compliance/Adaptive_Compliance_Volume_I_IMPLEMENTATION_Edition.pdf`
-- `assets/adaptive-compliance/chapters/`
-- `assets/adaptive-compliance/decks/`
+- `index.html`
+- `contact.html`
+- `speaking.html`
+- `styles.css`
+- `script.js`
 
-Upload the complete contents of this folder to the existing GitHub repository, preserving the folder structure.
+## Also included
+
+- `adaptive-compliance.html`
+
+This is the cleaner Adaptive Compliance page previously approved, now styled consistently with the restored green site. Replace the existing page with this copy so the full site uses one visual system.
+
+## Restored details
+
+- Public email: `micheal@michealsheehy.com`
+- Cell: `(818) 397-8890`
+- LinkedIn: `https://www.linkedin.com/in/micheal-s-88479045`
+- Dedicated Speaking page with keynote topics, additional themes, formats and enquiry link
+- Dedicated Contact page without repeated Adaptive Compliance content
+- Original dark-green, warm off-white and lime-accent visual identity
+- Multi-page navigation restored across all corrected files
+
+Keep all existing assets, PDFs, decks, article pages and case-study pages in place.
