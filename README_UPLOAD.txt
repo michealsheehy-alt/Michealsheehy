@@ -1,16 +1,17 @@
-NORTH KOREA INSIGHTS ARTICLE UPDATE
+MICHEAL SHEEHY WEBSITE - ADAPTIVE COMPLIANCE VOLUME III UPDATE
 
-Upload these files to the matching paths in the website repository:
+Upload the CONTENTS of this folder to the root of the GitHub website repository.
+Keep the folders exactly as shown.
 
-- insights.html
+Replace:
+- adaptive-compliance.html
 - sitemap.xml
-- articles/the-code-is-real-the-identity-is-fake.html
 
-This update publishes “The Code Is Real. The Identity Is Fake.” as a full
-Insights article, adds it to the Perspectives grid and adds the article URL to
-the sitemap.
+Add:
+- articles/trust-at-the-speed-of-money.html
+- assets/adaptive-compliance/Adaptive_Compliance_Volume_III_Trust_at_the_Speed_of_Money.pdf
+- assets/adaptive-compliance/volume-3-graphic.svg
+- assets/adaptive-compliance/volume-3/ (all nine diagram PNG files)
 
-The article contains no Payoneer or subpoena references.
-
-Preserve the folder structure exactly. Commit the changes, wait for GitHub
-Pages to redeploy, and hard-refresh with Command + Shift + R.
+The Adaptive Compliance page will then show Volume III between Volumes II and IV,
+with a Read the article button and a Download the PDF link.
