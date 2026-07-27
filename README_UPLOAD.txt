@@ -1,18 +1,13 @@
-PORTRAIT DISTRIBUTION UPDATE
+ADAPTIVE COMPLIANCE — VOLUME IV UPDATE
 
-This is intentionally restrained: one portrait on each relevant page, with no additional portraits on Speaking or Media because those pages already contain substantial visual content.
+Upload these files to the matching paths in the website repository:
 
-Upload to the ROOT of the GitHub repository:
-- index.html
-- about.html
-- insights.html
 - adaptive-compliance.html
-- case-studies.html
-- now.html
-- contact.html
-- portrait-accents.css
+- assets/adaptive-compliance/Adaptive_Compliance_Volume_IV_The_Message_Is_the_Control.pdf
+- assets/adaptive-compliance/volume-4-graphic.svg
 
-Upload the included portraits folder to:
-- assets/portraits/
+The update adds Volume IV, “The Message Is the Control,” to the Adaptive
+Compliance page and links the primary button directly to the downloadable PDF.
 
-Preserve the folder structure exactly. Commit the changes, wait for GitHub Pages to redeploy, and hard-refresh with Command + Shift + R.
+Preserve the folder structure exactly. Commit the changes, wait for GitHub
+Pages to redeploy, and hard-refresh with Command + Shift + R.
