@@ -1,0 +1,68 @@
+/* Portrait accents — July 2026
+   One portrait per relevant page, deliberately restrained so the site stays editorial rather than becoming a photo gallery. */
+.portrait-band{
+  display:grid;
+  grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);
+  gap:46px;
+  align-items:center;
+  padding:34px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:#fff;
+  box-shadow:0 16px 42px rgba(23,33,29,.055);
+}
+.portrait-band--reverse{grid-template-columns:minmax(0,1.28fr) minmax(250px,.72fr)}
+.portrait-band--reverse .portrait-frame{order:2}
+.portrait-band--reverse .portrait-copy{order:1}
+.portrait-band--dark{background:var(--dark);color:#fff;border-color:#34483e}
+.portrait-band--dark .eyebrow{color:#aabc9f}
+.portrait-band--dark p{color:#cbd3ce}
+.portrait-copy h2{font-size:clamp(2.3rem,4.3vw,4rem);margin:9px 0 18px}
+.portrait-copy p{max-width:690px;color:var(--muted)}
+.portrait-copy p:last-child{margin-bottom:0}
+.portrait-frame{margin:0}
+.portrait-frame img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(23,33,29,.14);
+}
+.portrait-frame figcaption{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:.74rem;
+  line-height:1.4;
+}
+.portrait-band--dark .portrait-frame figcaption{color:#aebbb4}
+.portrait-section{padding-top:0}
+.portrait-section--after-hero{padding-top:58px;padding-bottom:18px}
+.now-portrait-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(260px,.55fr);
+  gap:52px;
+  align-items:start;
+}
+.now-portrait-layout .portrait-frame{position:sticky;top:110px}
+.contact-portrait-layout{
+  display:grid;
+  grid-template-columns:minmax(250px,.6fr) minmax(0,1.4fr);
+  gap:34px;
+  align-items:stretch;
+}
+.contact-portrait-layout .portrait-frame img{height:100%;min-height:560px}
+.contact-portrait-layout .cta{height:100%}
+.hero-image-card img.portrait-home{object-position:center 22%}
+.profile-portrait img.portrait-about{object-position:center top}
+@media(max-width:900px){
+  .portrait-band,.portrait-band--reverse,.now-portrait-layout,.contact-portrait-layout{grid-template-columns:1fr}
+  .portrait-band--reverse .portrait-frame,.portrait-band--reverse .portrait-copy{order:initial}
+  .now-portrait-layout .portrait-frame{position:static;max-width:520px}
+  .contact-portrait-layout .portrait-frame img{min-height:420px;height:auto}
+}
+@media(max-width:650px){
+  .portrait-band{padding:22px;gap:26px}
+  .portrait-section--after-hero{padding-top:38px}
+  .portrait-frame img{aspect-ratio:4/5}
+}
