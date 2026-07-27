@@ -1,113 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="Speaking topics, keynote themes and executive sessions from Micheal Sheehy." name="description"/>
-  <title>Speaking | Micheal Sheehy</title>
-  <link href="styles.css" rel="stylesheet"/>
-  <style>
-    .speaking-scatter {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 34px;
-      align-items: start;
-    }
-
-    .speaking-shot {
-      margin: 0;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 14px 36px rgba(7, 24, 39, 0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .speaking-shot:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 42px rgba(7, 24, 39, 0.12);
-    }
-
-    .speaking-shot img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      background: #f5f7fb;
-    }
-
-    .speaking-shot figcaption {
-      padding: 12px 16px 15px;
-      color: var(--muted);
-      font-size: 0.83rem;
-      font-weight: 750;
-      letter-spacing: 0.01em;
-    }
-
-    .speaking-shot:nth-child(1) {
-      grid-column: 1 / span 4;
-      margin-top: 8px;
-      transform: rotate(-1.6deg);
-    }
-
-    .speaking-shot:nth-child(2) {
-      grid-column: 5 / span 3;
-      margin-top: 88px;
-      transform: rotate(1.5deg);
-    }
-
-    .speaking-shot:nth-child(3) {
-      grid-column: 8 / span 5;
-      margin-top: 22px;
-      transform: rotate(-0.8deg);
-    }
-
-    .speaking-shot:nth-child(4) {
-      grid-column: 2 / span 4;
-      margin-top: -4px;
-      transform: rotate(1.1deg);
-    }
-
-    .speaking-shot:nth-child(5) {
-      grid-column: 7 / span 4;
-      margin-top: 54px;
-      transform: rotate(-1.4deg);
-    }
-
-    .speaking-image-note {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 0.78rem;
-    }
-
-    @media (max-width: 980px) {
-      .speaking-scatter {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .speaking-shot,
-      .speaking-shot:nth-child(1),
-      .speaking-shot:nth-child(2),
-      .speaking-shot:nth-child(3),
-      .speaking-shot:nth-child(4),
-      .speaking-shot:nth-child(5) {
-        grid-column: auto;
-        margin-top: 0;
-        transform: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .speaking-scatter {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Speaking topics, keynote themes and executive sessions from Micheal Sheehy."/>
+<title>Speaking | Micheal Sheehy</title>
+<link rel="canonical" href="https://www.michealsheehy.com/speaking.html"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Micheal Sheehy"/>
+<meta property="og:title" content="Speaking | Micheal Sheehy"/>
+<meta property="og:description" content="Speaking topics, keynote themes and executive sessions from Micheal Sheehy."/>
+<meta property="og:url" content="https://www.michealsheehy.com/speaking.html"/>
+<meta property="og:image" content="https://www.michealsheehy.com/micheal-sheehy-headshot.jpg"/>
+<meta property="og:image:alt" content="Micheal Sheehy, global payments and compliance executive"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Speaking | Micheal Sheehy"/>
+<meta name="twitter:description" content="Speaking topics, keynote themes and executive sessions from Micheal Sheehy."/>
+<meta name="twitter:image" content="https://www.michealsheehy.com/micheal-sheehy-headshot.jpg"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.organizer-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}.organizer-links .card{min-height:220px}
+@media(max-width:720px){.organizer-links{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-<header class="site-header"><div class="container nav"><a class="brand" href="index.html">Micheal Sheehy</a><button aria-label="Open navigation" class="mobile-toggle">☰</button><nav aria-label="Primary navigation" class="nav-links"><a href="about.html">About</a><a href="insights.html">Insights</a><a href="adaptive-compliance.html">Adaptive Compliance</a><a href="case-studies.html">Case Studies</a><a aria-current="page" href="speaking.html">Speaking</a><a href="media.html">Media</a><a href="now.html">Now</a><a href="contact.html">Connect</a></nav></div></header>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html">Micheal Sheehy</a><button aria-label="Open navigation" class="mobile-toggle" type="button">☰</button><nav aria-label="Primary navigation" class="nav-links"><a href="about.html">About</a><a href="insights.html">Insights</a><a href="adaptive-compliance.html">Adaptive Compliance</a><a href="case-studies.html">Case Studies</a><a aria-current="page" href="speaking.html">Speaking</a><a href="media.html">Media</a><a href="now.html">Now</a><a href="contact.html">Connect</a></nav></div></header>
 <main>
   <section class="page-hero speaking-hero"><div class="container"><div class="eyebrow">Speaking &amp; Executive Sessions</div><h1>Practical perspectives from inside global payments.</h1><p class="lead">Micheal speaks with executive, regulatory and industry audiences about adaptive compliance, artificial intelligence, global payments, financial crime strategy and the capabilities required to manage risk at scale.</p><div class="button-row"><a class="button button-primary" href="contact.html">Invite Micheal to speak</a><a class="button button-secondary" href="media.html">View media appearances</a></div></div></section>
 
@@ -150,6 +68,8 @@
 
   <section class="section section-dark"><div class="container"><div class="section-head"><div><div class="eyebrow">Available formats</div><h2>From keynote to working session.</h2></div><p>Content and depth can be adapted to the room, from a concise industry talk to a practical implementation workshop.</p></div><div class="format-list"><article class="format"><h3>Conference keynote</h3><p>A clear, provocative argument supported by practical industry experience and original frameworks.</p></article><article class="format"><h3>Fireside chat</h3><p>A candid executive conversation on transformation, technology, risk and leadership.</p></article><article class="format"><h3>Board discussion</h3><p>A focused session on oversight, AI governance, risk appetite and strategic compliance capability.</p></article><article class="format"><h3>Executive roundtable</h3><p>An interactive discussion designed around the challenges facing participating leaders.</p></article><article class="format"><h3>Workshop</h3><p>A deeper implementation session using diagnostics, operating models and 30/60/90-day planning.</p></article><article class="format"><h3>Podcast or interview</h3><p>Conversational analysis of payments, financial crime, AI, sanctions and emerging trends.</p></article></div></div></section>
 
+
+  <section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">For organizers</div><h2>Everything needed to plan the conversation.</h2></div><p>Background, examples and a direct route to discuss the audience, format and desired outcome.</p></div><div class="organizer-links"><article class="card"><span class="number">Profile</span><h3>Executive biography</h3><p>Experience across global payments, compliance transformation, AI governance and organizational scale.</p><a class="read" href="about.html">View biography →</a></article><article class="card"><span class="number">Examples</span><h3>Media and appearances</h3><p>Interviews and public discussions covering payments, financial crime, biometrics and artificial intelligence.</p><a class="read" href="media.html">View appearances →</a></article><article class="card"><span class="number">Enquiries</span><h3>Discuss the event</h3><p>Share the audience, topic, location and format to shape a relevant session.</p><a class="read" href="contact.html">Contact Micheal →</a></article></div></div></section>
   <section class="section section-soft"><div class="container cta"><div><div class="eyebrow">Speaking enquiries</div><h2>Bring the conversation to your audience.</h2><p>For conferences, panels, podcasts, executive roundtables, board discussions and private leadership sessions.</p></div><a class="button button-primary" href="contact.html">Contact Micheal</a></div></section>
 </main>
 <footer class="footer"><div class="container footer-inner"><span>© 2026 Micheal Sheehy</span><span>Payments · Compliance · Adaptive Governance</span></div></footer><script src="script.js"></script>
