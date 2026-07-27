@@ -7,6 +7,40 @@
   <title>Adaptive Compliance | Micheal Sheehy</title>
   <link href="styles.css" rel="stylesheet" />
   <link href="portrait-accents.css" rel="stylesheet" />
+  <style>
+    /* Keep this page's portrait compact without changing portrait sizing elsewhere. */
+    .adaptive-page .portrait-band--adaptive{
+      grid-template-columns:minmax(0,230px) minmax(0,1fr);
+      gap:38px;
+      padding:32px 38px;
+    }
+    .adaptive-page .portrait-band--adaptive .portrait-frame{
+      width:100%;
+      max-width:230px;
+    }
+    .adaptive-page .portrait-band--adaptive .portrait-frame img{
+      display:block;
+      width:100%;
+      height:285px;
+      aspect-ratio:auto;
+      object-fit:cover;
+      object-position:center top;
+    }
+    @media(max-width:720px){
+      .adaptive-page .portrait-band--adaptive{
+        grid-template-columns:1fr;
+        gap:26px;
+        padding:24px;
+      }
+      .adaptive-page .portrait-band--adaptive .portrait-frame{
+        max-width:200px;
+        margin:0 auto;
+      }
+      .adaptive-page .portrait-band--adaptive .portrait-frame img{
+        height:250px;
+      }
+    }
+  </style>
 </head>
 <body class="adaptive-page">
 <header class="site-header"><div class="container nav"><a class="brand" href="index.html">Micheal Sheehy</a><button aria-label="Open navigation" class="mobile-toggle" type="button">☰</button><nav class="nav-links" aria-label="Primary navigation"><a href="about.html">About</a><a href="insights.html">Insights</a><a aria-current="page" href="adaptive-compliance.html">Adaptive Compliance</a><a href="case-studies.html">Case Studies</a><a href="speaking.html">Speaking</a><a href="media.html">Media</a><a href="now.html">Now</a><a href="contact.html">Connect</a></nav></div></header>
@@ -17,7 +51,7 @@
 <article class="series-volume-card" id="volume-two"><div class="series-volume-rail"><span>Volume</span><strong>II</strong></div><div class="series-volume-copy"><div class="eyebrow">Executive Essay · Payments &amp; Fintech</div><h2>The Compliance Advantage</h2><p>How mature compliance creates trust, protects access, improves product design and allows payments and fintech companies to move with greater confidence.</p><div class="series-volume-actions"><a class="button button-primary" href="articles/compliance-advantage.html">Read the article</a><a class="quiet-link" href="assets/compliance-advantage-illustrated.pdf" target="_blank" rel="noopener">Download illustrated PDF ↓</a></div></div><div class="series-volume-art"><img src="assets/adaptive-compliance/volume-2-graphic.svg" alt="A flywheel connecting intelligence, design, trust, access and growth" /></div></article>
 <article class="series-volume-card" id="volume-four"><div class="series-volume-rail"><span>Volume</span><strong>IV</strong></div><div class="series-volume-copy"><div class="eyebrow">Payment Intelligence · Financial-Crime Controls</div><h2>The Message Is the Control</h2><p>How richer, structured payment data can move financial-crime controls upstream—connecting identity, purpose and context to decisions before value moves.</p><div class="series-volume-actions"><a class="button button-primary" href="assets/adaptive-compliance/Adaptive_Compliance_Volume_IV_The_Message_Is_the_Control.pdf" download>Download the PDF</a></div></div><div class="series-volume-art"><img src="assets/adaptive-compliance/volume-4-graphic.svg" alt="A structured payment message connecting identity, purpose and context to a financial-crime control decision" /></div></article>
 </div></section>
-<section class="section portrait-section"><div class="container"><div class="portrait-band portrait-band--dark"><figure class="portrait-frame"><img src="assets/portraits/micheal-sheehy-windowpane-suit.webp" alt="Micheal Sheehy in a windowpane suit in a modern office" width="1128" height="1500" loading="lazy" decoding="async"/></figure><div class="portrait-copy"><div class="eyebrow">From argument to operating model</div><h2>Governance only matters when it changes decisions.</h2><p>The series is designed to move beyond broad statements about innovation. Each chapter connects a strategic argument to ownership, metrics, escalation, implementation and the day-to-day choices made inside regulated institutions.</p></div></div></div></section>
+<section class="section portrait-section"><div class="container"><div class="portrait-band portrait-band--dark portrait-band--adaptive"><figure class="portrait-frame"><img src="assets/portraits/micheal-sheehy-windowpane-suit.webp" alt="Micheal Sheehy in a windowpane suit in a modern office" width="1128" height="1500" loading="lazy" decoding="async"/></figure><div class="portrait-copy"><div class="eyebrow">From argument to operating model</div><h2>Governance only matters when it changes decisions.</h2><p>The series is designed to move beyond broad statements about innovation. Each chapter connects a strategic argument to ownership, metrics, escalation, implementation and the day-to-day choices made inside regulated institutions.</p></div></div></div></section>
 <section class="section adaptive-chapters" id="chapters"><div class="container"><div class="adaptive-section-heading"><div><div class="eyebrow">Volume I · Complete series</div><h2>Eight implementation chapters.</h2></div><p>Each paper combines the strategic argument with a case study, practical operating model, reusable tools and a matching workshop deck.</p></div><div class="adaptive-chapter-grid">
 <article class="adaptive-chapter-card"><div class="chapter-card-top"><span class="chapter-index">01</span><span class="chapter-number">Detection effectiveness</span></div><h3>The Industry Solved the Wrong Problem</h3><p>Move transaction monitoring beyond alert reduction toward risk coverage, detection effectiveness and governed redesign.</p><div class="chapter-resource-links"><a href="assets/adaptive-compliance/chapters/01_The_Industry_Solved_the_Wrong_Problem.pdf" target="_blank" rel="noopener">Read chapter →</a><a href="assets/adaptive-compliance/decks/01_The_Industry_Solved_the_Wrong_Problem_Implementation_Deck.pptx" download>Deck ↓</a></div></article>
 <article class="adaptive-chapter-card"><div class="chapter-card-top"><span class="chapter-index">02</span><span class="chapter-number">Regulatory intelligence</span></div><h3>The Evidence Has Been There All Along</h3><p>Turn enforcement lessons into applicability assessments, control changes and sustainable remediation.</p><div class="chapter-resource-links"><a href="assets/adaptive-compliance/chapters/02_The_Evidence_Has_Been_There_All_Along.pdf" target="_blank" rel="noopener">Read chapter →</a><a href="assets/adaptive-compliance/decks/02_The_Evidence_Has_Been_There_All_Along_Implementation_Deck.pptx" download>Deck ↓</a></div></article>
