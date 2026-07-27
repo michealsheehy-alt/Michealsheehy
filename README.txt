@@ -1,9 +1,15 @@
-FINAL HOMEPAGE + SPEAKING FIX
+SPEAKING PAGE SCATTERED IMAGE UPDATE
 
-1. Upload index.html to the ROOT of the GitHub repository and replace the existing index.html.
-2. Upload speaking.html to the ROOT and replace the existing speaking.html.
-3. Keep the three WebP files in assets/speaking/ exactly as they are.
-4. Commit the changes and wait for GitHub Pages to redeploy.
-5. Hard-refresh the site with Command + Shift + R.
+Upload these to your GitHub repository:
 
-The old root index.html was a one-page version with #anchor links. This index.html restores the multi-page navigation used by the rest of the site.
+1. Replace the root speaking.html file with the included speaking.html.
+2. Upload all files from assets/speaking/ to the repository path assets/speaking/.
+   These include the 3 existing speaking images plus 2 new ones.
+3. Commit the changes.
+4. Refresh the site after GitHub Pages redeploys.
+
+What changed:
+- Added the 2 new speaking images.
+- Reduced the visual size of the original 3 images.
+- Replaced the 3-up gallery with a scattered collage layout.
+- Mobile layout collapses cleanly to 2 columns and then 1 column.
