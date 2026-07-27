@@ -1,0 +1,77 @@
+/* Money20/20 media feature box */
+.media-feature-box{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:0 18px 44px rgba(23,33,29,.06);
+  padding:38px;
+  display:grid;
+  gap:28px;
+}
+
+.media-feature-copy h2{
+  margin:10px 0 18px;
+  font-size:clamp(2.3rem,4.1vw,4rem);
+  line-height:1.06;
+}
+
+.media-feature-copy p{
+  max-width:940px;
+  color:var(--muted);
+  margin-bottom:0;
+}
+
+.media-video-card{
+  background:#f8f6f0;
+  border:1px solid rgba(23,33,29,.09);
+  border-radius:24px;
+  padding:28px;
+  display:grid;
+  gap:22px;
+  justify-items:center;
+  text-align:center;
+}
+
+.media-video-frame{
+  width:min(100%, 760px);
+  margin:0 auto;
+  background:#fff;
+  border:1px solid rgba(23,33,29,.1);
+  border-radius:20px;
+  box-shadow:0 14px 34px rgba(23,33,29,.08);
+  padding:14px;
+}
+
+.media-video-frame iframe,
+.media-video-frame blockquote,
+.media-video-frame .linkedin-post,
+.media-video-frame img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  border:0;
+  border-radius:14px;
+  aspect-ratio:16 / 9;
+  min-height:360px;
+  object-fit:cover;
+}
+
+.media-video-meta{
+  max-width:760px;
+}
+
+.media-video-meta p{
+  color:var(--muted);
+  margin:0 0 18px;
+}
+
+@media(max-width:700px){
+  .media-feature-box{padding:24px}
+  .media-video-card{padding:18px}
+  .media-video-frame{padding:10px}
+  .media-video-frame iframe,
+  .media-video-frame blockquote,
+  .media-video-frame .linkedin-post,
+  .media-video-frame img{min-height:220px}
+}
