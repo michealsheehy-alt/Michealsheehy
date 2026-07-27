@@ -1,22 +1,43 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Public-safe transformation case studies from Micheal Sheehy."><title>Case Studies | Micheal Sheehy</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="portrait-accents.css"><style>
 .case-studies-band{
-  grid-template-columns:minmax(220px,.42fr) minmax(0,1.58fr);
-  gap:34px;
+  grid-template-columns:minmax(0,1fr) 160px;
+  gap:26px;
+  padding:26px 30px;
 }
 .case-studies-band .portrait-frame{
-  max-width:280px;
+  width:160px;
+  max-width:160px;
   justify-self:end;
 }
 .case-studies-band .portrait-frame img{
-  aspect-ratio:4/5;
+  width:160px;
+  height:160px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  object-position:center 22%;
+  border-radius:16px;
 }
-@media(max-width:900px){
+.case-studies-band .portrait-frame figcaption{
+  font-size:.66rem;
+  line-height:1.25;
+  margin-top:7px;
+}
+.case-studies-band .portrait-copy h2{
+  font-size:clamp(2rem,3.4vw,3.2rem);
+}
+@media(max-width:700px){
   .case-studies-band{
     grid-template-columns:1fr;
+    padding:22px;
   }
   .case-studies-band .portrait-frame{
-    max-width:340px;
+    width:130px;
+    max-width:130px;
     justify-self:start;
+  }
+  .case-studies-band .portrait-frame img{
+    width:130px;
+    height:130px;
   }
 }
 </style></head><body><header class="site-header"><div class="container nav"><a class="brand" href="index.html">Micheal Sheehy</a><button class="mobile-toggle" aria-label="Open navigation" type="button">☰</button><nav class="nav-links" aria-label="Primary navigation"><a href="about.html">About</a><a href="insights.html">Insights</a><a href="adaptive-compliance.html">Adaptive Compliance</a><a href="case-studies.html" aria-current="page">Case Studies</a><a href="speaking.html">Speaking</a><a href="media.html">Media</a><a href="now.html">Now</a><a href="contact.html">Connect</a></nav></div></header><main><section class="page-hero"><div class="container"><div class="eyebrow">Case Studies</div><h1>Transformation without the confidential detail.</h1><p class="lead">Substantive, public-safe stories about strategic choices, operating models and lessons from building compliance capability at scale.</p></div></section>
