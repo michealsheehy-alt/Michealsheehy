@@ -1,15 +1,16 @@
-MEDIA PAGE VIDEO BOX FIX
+MEDIA PAGE COMPLETE POLISH
 
-Because the current media.html file was not available locally, this package gives you a drop-in replacement section and CSS.
+Upload:
+- Replace the media.html file in the ROOT of the GitHub repository.
 
-HOW TO USE:
-1. Open your media.html file.
-2. Replace the current Money20/20 section with the block in media-section-snippet.html.
-3. Paste the CSS from media-section-styles.css into your page inside <style> tags or into your main stylesheet.
-4. Keep your existing LinkedIn iframe/embed URL and your Watch on LinkedIn URL; just replace the placeholders.
+No new image files are required. The page continues to use:
+- assets/nasdaq-tradetalks-screenshot.png
 
-Result:
-- content appears inside a clean card/box
-- video is centered
-- embed is framed
-- fallback copy and button align nicely
+What changed:
+- Rebuilt the two featured-video sections as consistent editorial cards.
+- Added clear section headings and more balanced spacing.
+- Standardized all article and interview cards.
+- Put the Money20/20 section inside a centered, framed video box.
+- Improved tablet and mobile layouts.
+- Added canonical and social-sharing metadata.
+- Preserved all existing external destinations.

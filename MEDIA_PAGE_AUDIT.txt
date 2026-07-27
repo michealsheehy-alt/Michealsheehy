@@ -1,0 +1,32 @@
+MEDIA PAGE STATIC AUDIT
+
+Internal file references: 14
+- about.html
+- adaptive-compliance.html
+- assets/nasdaq-tradetalks-screenshot.png
+- case-studies.html
+- contact.html
+- favicon.svg
+- index.html
+- insights.html
+- media.html
+- now.html
+- script.js
+- speaking.html
+- styles.css
+
+External destinations: 13
+- https://paymentexpert.com/2023/08/23/payoneer-cross-border-payments/
+- https://thefr.com/news/russian-sanctions-and-compliance-in-2022-with-payoneer
+- https://tv.pymnts.com/detail/video/6372137263112/east-west-commerce-gets-biometrics-boost-and-automated-compliance?autoStart=true&q=payoneer
+- https://vaultplatform.com/blog/integrity-innovators-up-close-with-payoneers-micheal-sheehy/
+- https://www.finextra.com/blogposting/26041/how-to-combat-the-looming-threat-of-dprk-fincrimes
+- https://www.finextra.com/the-long-read/660/identity-verification-how-to-strike-a-balance-between-speed-and-security
+- https://www.fintechfutures.com/financial-crime-fraud-prevention/video-how-payoneer-prevents-financial-crime-with-thetaray-s-tech
+- https://www.linkedin.com/feed/update/urn:li:activity:6994325153895596032/
+- https://www.michealsheehy.com/media.html
+- https://www.nasdaq.com/videos/how-financial-institutions-are-utilizing-ai-and-machine-learning-technology-combat-fraud
+- https://www.paymentsjournal.com/the-importance-of-ai-and-biometrics-in-regulatory-compliance-in-finance/
+- https://www.payoneer.com/resources/industry-pulse/research-reports/navigating-global-regulatory-maze/
+
+HTML parsed successfully.
