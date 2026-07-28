@@ -677,6 +677,15 @@ def build_toolkit():
     return path
 
 
+def build_toolkit():
+    """Build the detailed executive toolkit maintained in its dedicated generator."""
+    try:
+        from scripts.generate_adaptive_toolkit import build_toolkit as build_detailed_toolkit
+    except ImportError:
+        from generate_adaptive_toolkit import build_toolkit as build_detailed_toolkit
+    return build_detailed_toolkit()
+
+
 if __name__ == "__main__":
     media = build_media_kit()
     toolkit = build_toolkit()
