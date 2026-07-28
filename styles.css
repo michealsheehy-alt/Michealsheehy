@@ -119,6 +119,9 @@ p{margin:0 0 18px}
 .resource-card h2,.resource-card h3{margin:15px 0 14px}
 .resource-card p{color:var(--muted)}
 .resource-card .read{margin-top:auto}
+.tools-page .resource-card{min-width:0;min-height:360px;overflow:hidden}
+.tools-page .resource-card h2{font-size:clamp(2rem,2.4vw,2.55rem);line-height:1.04;letter-spacing:-.035em;text-wrap:balance}
+.tools-page .resource-card p{line-height:1.6}
 .start-routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .start-route{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;display:flex;flex-direction:column;min-height:360px}
 .start-route h2{font-size:2.35rem;margin:14px 0 18px}
@@ -143,8 +146,8 @@ p{margin:0 0 18px}
 .compact-proof div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
 .compact-proof strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;margin-bottom:7px}
 .compact-proof span{color:var(--muted);font-size:.84rem}
-@media(max-width:920px){.resource-grid,.start-routes{grid-template-columns:1fr 1fr}.download-panel{grid-template-columns:1fr}.compact-proof{grid-template-columns:1fr 1fr}}
-@media(max-width:650px){.resource-grid,.start-routes,.article-utility__nav,.compact-proof{grid-template-columns:1fr}.start-route{min-height:auto}.download-panel{padding:30px}.download-panel h2{font-size:2.45rem}}
+@media(max-width:920px){.resource-grid,.start-routes{grid-template-columns:1fr 1fr}.download-panel{grid-template-columns:1fr}.compact-proof{grid-template-columns:1fr 1fr}.tools-page .resource-card{min-height:330px}}
+@media(max-width:650px){.resource-grid,.start-routes,.article-utility__nav,.compact-proof{grid-template-columns:1fr}.start-route,.tools-page .resource-card{min-height:auto}.download-panel{padding:30px}.download-panel h2{font-size:2.45rem}.tools-page .resource-card h2{font-size:clamp(2rem,10vw,2.45rem)}}
 
 /* 2026-07-27 — Volume consistency, editorial chapter cards and speaking gallery */
 .adaptive-page .volumes-heading{margin-bottom:30px}
