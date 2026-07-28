@@ -25,6 +25,17 @@
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
 
+  if (!links.querySelector('a[data-home-link]')) {
+    const home = document.createElement('a');
+    home.href = '/';
+    home.textContent = 'Home';
+    home.dataset.homeLink = 'true';
+    if (location.pathname === '/' || location.pathname.endsWith('/index.html')) {
+      home.setAttribute('aria-current', 'page');
+    }
+    links.prepend(home);
+  }
+
   if (!links.id) links.id = 'primary-navigation';
   toggle.setAttribute('aria-controls', links.id);
   toggle.setAttribute('aria-expanded', 'false');

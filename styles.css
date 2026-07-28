@@ -30,7 +30,7 @@ p{margin:0 0 18px}
 .button:hover{transform:translateY(-1px)}
 .light-border{color:white;border-color:#718078}
 .hero{padding:92px 0 76px;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(330px,.7fr);gap:62px;align-items:end}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(330px,.7fr);gap:62px;align-items:start}
 .hero h1{max-width:930px;margin:17px 0 28px}
 .hero-statement{max-width:900px;margin:-8px 0 24px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4.1vw,3.7rem);font-weight:500;letter-spacing:-.03em;line-height:1.03;color:var(--ink)}
 .hero-card{background:var(--dark);color:white;border-radius:26px;padding:34px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
