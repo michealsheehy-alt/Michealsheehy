@@ -51,4 +51,85 @@
   window.addEventListener('resize', () => {
     if (window.innerWidth > 980) setOpen(false);
   });
+
+  document.querySelectorAll('[data-filter-target]').forEach((bar) => {
+    const target = document.querySelector(bar.dataset.filterTarget);
+    if (!target) return;
+    const cards = [...target.querySelectorAll('[data-category]')];
+    bar.querySelectorAll('button[data-filter]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.filter;
+        bar.querySelectorAll('button[data-filter]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        cards.forEach((card) => {
+          const categories = (card.dataset.category || '').split(/\s+/);
+          card.hidden = selected !== 'all' && !categories.includes(selected);
+        });
+      });
+    });
+  });
+
+  const canonical = document.querySelector('link[rel="canonical"]')?.href;
+  const article = document.querySelector('main article');
+  const path = location.pathname.replace(/\/+$/, '');
+  if (canonical && article && path.includes('/articles/') && !document.querySelector('.article-utility')) {
+    const sequences = [
+      [
+        ['/articles/chapter-1.html', 'The Industry Solved the Wrong Problem'],
+        ['/articles/chapter-2.html', 'The Evidence Has Been There All Along'],
+        ['/articles/chapter-3.html', 'Every Model Begins Drifting on Day One'],
+        ['/articles/chapter-4.html', 'The Adaptive Compliance Maturity Model'],
+        ['/articles/chapter-5.html', 'AI Won’t Replace Compliance'],
+        ['/articles/chapter-6.html', 'Designing an Adaptive Compliance Organization'],
+        ['/articles/chapter-7.html', 'Measuring What Matters'],
+        ['/articles/chapter-8.html', 'Adaptive Compliance as a Strategic Capability']
+      ],
+      [
+        ['/articles/compliance-advantage.html', 'The Compliance Advantage'],
+        ['/articles/trust-at-the-speed-of-money.html', 'Trust at the Speed of Money'],
+        ['/articles/the-message-is-the-control.html', 'The Message Is the Control'],
+        ['/articles/the-criminal-is-already-in-production.html', 'The Criminal Is Already in Production'],
+        ['/articles/global-compliance-without-the-global-bottleneck.html', 'Global Compliance Without the Global Bottleneck'],
+        ['/articles/your-new-platform-is-not-a-transformation.html', 'Your New Platform Is Not a Transformation'],
+        ['/articles/the-safest-customer-is-not-the-customer-you-refused-to-understand.html', 'The Safest Customer Is Not the Customer You Refused to Understand']
+      ],
+      [
+        ['/articles/the-loneliness-of-senior-accountability.html', 'The Loneliness of Senior Accountability'],
+        ['/articles/the-vendor-decision-i-got-wrong.html', 'The Vendor Decision I Got Wrong'],
+        ['/articles/your-leaders-should-eventually-stop-needing-you.html', 'Your Leaders Should Eventually Stop Needing You'],
+        ['/articles/escalation-is-evidence-of-a-healthy-culture.html', 'Why Escalation Is Evidence of a Healthy Culture'],
+        ['/articles/a-cco-must-sometimes-be-unpopular.html', 'A CCO Must Sometimes Be Comfortable Being Unpopular']
+      ]
+    ];
+    const currentSequence = sequences.find((items) => items.some(([url]) => path.endsWith(url)));
+    const index = currentSequence?.findIndex(([url]) => path.endsWith(url)) ?? -1;
+    const previous = index > 0 ? currentSequence[index - 1] : null;
+    const next = currentSequence && index < currentSequence.length - 1 ? currentSequence[index + 1] : null;
+    const related = path.includes('leadership') || path.includes('loneliness') || path.includes('vendor-decision') || path.includes('leaders-should') || path.includes('escalation') || path.includes('unpopular')
+      ? [
+          ['/articles/personal-side-of-being-a-cco.html', 'Finding My Voice'],
+          ['/articles/c-suite-leadership.html', 'What Nobody Tells You About Joining the C-Suite']
+        ]
+      : [
+          ['/tools.html', 'Practical tools and frameworks'],
+          ['/global-compliance-atlas.html', 'The Global Compliance Atlas']
+        ];
+    const utility = document.createElement('section');
+    utility.className = 'article-utility';
+    utility.setAttribute('aria-label', 'Article actions and related reading');
+    const navItems = [
+      previous ? `<a href="..${previous[0]}"><span>Previous</span><strong>${previous[1]}</strong></a>` : '',
+      next ? `<a href="..${next[0]}"><span>Next</span><strong>${next[1]}</strong></a>` : ''
+    ].join('');
+    utility.innerHTML = `
+      <div class="article-utility__share">
+        <strong>Share this perspective</strong>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonical)}" target="_blank" rel="noopener noreferrer">Share on LinkedIn ↗</a>
+        <a href="mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(canonical)}">Share by email</a>
+      </div>
+      ${navItems ? `<nav class="article-utility__nav" aria-label="Previous and next article">${navItems}</nav>` : ''}
+      <div class="article-utility__related"><h2>Continue reading</h2><ul>${related.map(([url,title]) => `<li><a href="..${url}">${title}</a></li>`).join('')}</ul></div>
+    `;
+    const host = article.closest('.container') || article.parentElement;
+    host.appendChild(utility);
+  }
 })();
