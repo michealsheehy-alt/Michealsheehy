@@ -125,12 +125,6 @@ p{margin:0 0 18px}
 .start-route p{color:var(--muted)}
 .start-route ul{padding-left:20px;margin:0 0 24px}
 .start-route .button{margin-top:auto;align-self:flex-start}
-.atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.atlas-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
-.atlas-card h2{font-size:2.25rem;margin:10px 0 16px}
-.atlas-card p{color:var(--muted)}
-.atlas-tags{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}
-.atlas-tags span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:.72rem;font-weight:800}
 .download-panel{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:34px;align-items:center;background:var(--dark);color:#fff;border-radius:26px;padding:40px}
 .download-panel h2{font-size:3rem;margin:8px 0 16px}.download-panel p{color:#ccd5cf}
 .download-actions{display:flex;flex-direction:column;align-items:stretch;gap:10px}.download-actions .button{width:100%}
@@ -150,7 +144,7 @@ p{margin:0 0 18px}
 .compact-proof strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;margin-bottom:7px}
 .compact-proof span{color:var(--muted);font-size:.84rem}
 @media(max-width:920px){.resource-grid,.start-routes{grid-template-columns:1fr 1fr}.download-panel{grid-template-columns:1fr}.compact-proof{grid-template-columns:1fr 1fr}}
-@media(max-width:650px){.resource-grid,.start-routes,.atlas-grid,.article-utility__nav,.compact-proof{grid-template-columns:1fr}.start-route{min-height:auto}.download-panel{padding:30px}.download-panel h2{font-size:2.45rem}}
+@media(max-width:650px){.resource-grid,.start-routes,.article-utility__nav,.compact-proof{grid-template-columns:1fr}.start-route{min-height:auto}.download-panel{padding:30px}.download-panel h2{font-size:2.45rem}}
 
 /* 2026-07-27 — Volume consistency, editorial chapter cards and speaking gallery */
 .adaptive-page .volumes-heading{margin-bottom:30px}

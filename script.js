@@ -121,9 +121,14 @@
           ['/articles/personal-side-of-being-a-cco.html', 'Finding My Voice'],
           ['/articles/c-suite-leadership.html', 'What Nobody Tells You About Joining the C-Suite']
         ]
+      : path.endsWith('/articles/one-global-standard-does-not-mean-one-global-answer.html')
+        ? [
+            ['/articles/global-compliance-without-the-global-bottleneck.html', 'Global Compliance Without the Global Bottleneck'],
+            ['/articles/global-standards-local-proof.html', 'Global Standards, Local Proof']
+          ]
       : [
           ['/tools.html', 'Practical tools and frameworks'],
-          ['/global-compliance-atlas.html', 'The Global Compliance Atlas']
+          ['/articles/one-global-standard-does-not-mean-one-global-answer.html', 'One Global Standard Does Not Mean One Global Answer']
         ];
     const utility = document.createElement('section');
     utility.className = 'article-utility';
