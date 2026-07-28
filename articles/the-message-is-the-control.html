@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="The Message Is the Control: how enforceable payment transparency and structured data can move financial-crime controls upstream, by Micheal Sheehy."/>
+  <title>The Message Is the Control | Micheal Sheehy</title>
+  <link rel="canonical" href="https://www.michealsheehy.com/articles/the-message-is-the-control.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Micheal Sheehy"/>
+  <meta property="og:title" content="The Message Is the Control | Micheal Sheehy"/>
+  <meta property="og:description" content="The Message Is the Control: how enforceable payment transparency and structured data can move financial-crime controls upstream, by Micheal Sheehy."/>
+  <meta property="og:url" content="https://www.michealsheehy.com/articles/the-message-is-the-control.html"/>
+  <meta property="og:image" content="https://www.michealsheehy.com/assets/adaptive-compliance/volume-4/figure-01-instruction-to-intelligence.png"/>
+  <meta property="og:image:alt" content="The Message Is the Control"/>
+  <meta property="article:published_time" content="2026-07-28"/>
+  <meta property="article:modified_time" content="2026-07-28"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="The Message Is the Control | Micheal Sheehy"/>
+  <meta name="twitter:description" content="The Message Is the Control: how enforceable payment transparency and structured data can move financial-crime controls upstream, by Micheal Sheehy."/>
+  <meta name="twitter:image" content="https://www.michealsheehy.com/assets/adaptive-compliance/volume-4/figure-01-instruction-to-intelligence.png"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <style>
+    .article-hero{padding:88px 0 66px;background:linear-gradient(135deg,#17211d 0%,#20332a 58%,#344b3e 100%);color:#fff}
+    .article-hero .eyebrow{color:#aabc9f}
+    .article-hero h1{max-width:1020px;margin:15px 0 24px}
+    .article-hero .lead{color:#d5ddd8}
+    .article-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+    .article-meta span{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 11px;font-size:.76rem;font-weight:750}
+    .article-hero .button-row{margin-top:30px}
+    .payment-message-article{max-width:790px;font-family:Georgia,"Times New Roman",serif;font-size:1.1rem;color:#2d3a34}
+    .payment-message-article>h1{font-size:clamp(2.6rem,5vw,4.5rem);line-height:1.02;margin:82px 0 24px;color:var(--ink);scroll-margin-top:108px}
+    .payment-message-article>h2{font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.08;margin:54px 0 18px;scroll-margin-top:108px}
+    .payment-message-article p{margin-bottom:21px}
+    .payment-message-article ul,.payment-message-article ol{padding-left:24px;margin:0 0 28px}
+    .payment-message-article li{margin:8px 0}
+    .payment-message-article li p{margin:0}
+    .payment-message-article blockquote{margin:30px 0 38px;padding:24px 26px;border-left:4px solid var(--accent);background:#e9eee7;border-radius:0 14px 14px 0;font-size:1.16rem;color:var(--ink)}
+    .payment-message-article blockquote p{margin:0}
+    .chapter-heading{margin:96px 0 34px;padding-top:42px;border-top:1px solid var(--line);scroll-margin-top:100px}
+    .chapter-heading .eyebrow{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#738125}
+    .chapter-heading h1{font-size:clamp(2.7rem,5.4vw,4.9rem);line-height:.98;margin:10px 0 18px;color:var(--ink)}
+    .chapter-dek{font-size:1.3rem;line-height:1.45;color:var(--muted);font-style:italic}
+    .volume-figure{margin:40px 0 46px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 14px 36px rgba(23,33,29,.07)}
+    .volume-figure img{width:100%;height:auto;border-radius:12px}
+    .volume-figure figcaption{margin-top:13px;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:.78rem;color:var(--muted)}
+    .payment-message-article a{text-decoration-thickness:1px;text-underline-offset:3px}
+    .article-aside nav a{text-decoration:none}
+    .article-aside nav a:hover{text-decoration:underline}
+    .article-aside .button{display:flex;margin:20px 0 22px;color:#151b14}
+    .article-aside .back-link{padding-top:18px;border-top:1px solid var(--line)}
+    @media(max-width:980px){
+      .article-layout{display:flex;flex-direction:column}
+      .article-aside{width:100%}
+      .article-aside nav{columns:2;column-gap:24px}
+      .payment-message-article{max-width:none}
+    }
+    @media(max-width:620px){
+      .article-hero{padding:68px 0 54px}
+      .article-aside nav{columns:1}
+      .payment-message-article{font-size:1.03rem}
+      .chapter-heading{margin-top:72px}
+      .volume-figure{margin-left:-6px;margin-right:-6px;padding:10px}
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://www.michealsheehy.com/articles/the-message-is-the-control.html#article","headline":"The Message Is the Control","description":"The Message Is the Control: how enforceable payment transparency and structured data can move financial-crime controls upstream, by Micheal Sheehy.","image":"https://www.michealsheehy.com/assets/adaptive-compliance/volume-4/figure-01-instruction-to-intelligence.png","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Person","@id":"https://www.michealsheehy.com/about.html#person","name":"Micheal Sheehy","url":"https://www.michealsheehy.com/about.html"},"publisher":{"@type":"Person","@id":"https://www.michealsheehy.com/about.html#person","name":"Micheal Sheehy","url":"https://www.michealsheehy.com/about.html"},"isPartOf":{"@id":"https://www.michealsheehy.com/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.michealsheehy.com/articles/the-message-is-the-control.html"}}</script>
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Micheal Sheehy</a><button aria-label="Open navigation" class="mobile-toggle" type="button">☰</button><nav aria-label="Primary navigation" class="nav-links"><a href="../about.html">About</a><a href="../insights.html">Insights</a><a aria-current="page" href="../adaptive-compliance.html">Adaptive Compliance</a><a href="../case-studies.html">Case Studies</a><a href="../speaking.html">Speaking</a><a href="../media.html">Media</a><a href="../now.html">Now</a><a href="../contact.html">Connect</a></nav></div></header>
+<main>
+  <section class="article-hero"><div class="container">
+    <div class="eyebrow">The Adaptive Compliance Series · Volume IV</div>
+    <h1>The Message Is the Control</h1>
+    <p class="lead">How Payment Data Is Becoming the First Line of Financial-Crime Defence</p>
+    <div class="article-meta"><span>By Micheal Sheehy</span><span>50 min read</span><span>July 2026</span></div>
+    <div class="button-row"><a class="button button-primary" href="../assets/adaptive-compliance/Adaptive_Compliance_Volume_IV_The_Message_Is_the_Control.pdf" download>Download the PDF</a></div>
+  </div></section>
+
+  <section class="section"><div class="container article-layout">
+    <aside class="article-aside">
+      <strong>In this volume</strong>
+      <nav>
+        <a href="#foreword">Foreword</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#chapter-1">1 · Payment data</a>
+        <a href="#chapter-2">2 · Structured data</a>
+        <a href="#chapter-3">3 · Payment transparency</a>
+        <a href="#chapter-4">4 · Identity</a>
+        <a href="#chapter-5">5 · Context</a>
+        <a href="#chapter-6">6 · Upstream screening</a>
+        <a href="#chapter-7">7 · AI and payment intelligence</a>
+        <a href="#chapter-8">8 · The message becomes the control</a>
+        <a href="#toolkit">Control toolkit</a>
+        <a href="#references-and-further-reading">References</a>
+      </nav>
+      <a class="button button-primary" href="../assets/adaptive-compliance/Adaptive_Compliance_Volume_IV_The_Message_Is_the_Control.pdf" download>Download the PDF</a>
+      <a class="back-link" href="../adaptive-compliance.html">← Adaptive Compliance</a>
+    </aside>
+
+    <article class="payment-message-article">
+<h1 id="foreword">Foreword</h1>
+
+<p>Financial-crime compliance has spent much of the past twenty years
+looking at payments from the outside.</p>
+
+<p>The payment moved. A message recorded the instruction. A monitoring
+system later examined selected attributes and decided whether the
+transaction resembled a rule, scenario or learned pattern. If it did, an
+investigator attempted to reconstruct the commercial reality behind
+it.</p>
+
+<p>This model was understandable when payment messages were sparse,
+infrastructures were fragmented and processing time created a natural
+interval between initiation and settlement. But the conditions
+supporting it are disappearing. Payments are becoming faster, more
+interconnected and increasingly available around the clock. At the same
+time, payment messages are becoming richer, more structured and more
+capable of carrying information about the people, organisations and
+purposes behind the transfer.</p>
+
+<p>The significance of that change is easy to underestimate.</p>
+
+<p>The move to richer payment data is often described as a technology
+migration: new schemas, new fields, new validation rules and a long
+programme of implementation meetings. Anyone who has survived such a
+programme may reasonably feel that “new era of payments” is a rather
+glamorous description for several years of mapping spreadsheets.</p>
+
+<p>Yet the deeper change is not technical. It is architectural.</p>
+
+<p>When the information accompanying a payment becomes structured,
+reliable and available at the moment of decision, it can do more than
+explain the payment. It can help control it.</p>
+
+<p>That possibility connects directly to the argument developed
+throughout the Adaptive Compliance series. Compliance effectiveness is
+not defined by the volume of controls an organisation can document. It
+is defined by how quickly the organisation can turn information into a
+sound decision, learn from the outcome and improve what happens
+next.</p>
+
+<p>Payment data sits at the centre of that learning system.</p>
+
+<p>This volume explores what changes when the message is no longer
+treated as a passive transport envelope. It examines the opportunity
+created by structured standards, the regulatory move toward enforceable
+payment transparency, the additional attribution complexity created by
+virtual-account models, the importance of preserving ultimate-party
+identity and the role of context in sanctions, fraud and
+anti-money-laundering decisions. It also considers the governance
+required when artificial intelligence begins interpreting payment
+narratives and recommending action in real time.</p>
+
+<p>The argument is not that every field should become mandatory, every
+payment should carry a biography or every institution should share every
+piece of customer information. More data can create privacy risk,
+operational friction and false confidence. A beautifully structured lie
+remains a lie.</p>
+
+<p>The argument is that payment information should be designed, governed
+and measured as part of the control environment.</p>
+
+<p>The industry has spent billions teaching monitoring systems to infer
+facts that the payment message could have carried in the first place.
+The next stage of financial-crime control begins by closing that
+gap.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<h2 id="the-information-was-always-part-of-the-payment">The Information
+Was Always Part of the Payment</h2>
+
+<p>Every payment tells a story.</p>
+
+<p>There is a payer, a beneficiary, a reason, a relationship and a
+route. There is usually an economic event behind the instruction: an
+invoice, payroll, a marketplace sale, a family remittance, a refund, an
+investment, a property purchase or the movement of money between
+accounts controlled by the same party.</p>
+
+<p>Traditional payment messages captured only fragments of that story.
+Compliance systems were then asked to decide whether the payment was
+suspicious by examining the fragments that happened to survive the
+journey.</p>
+
+<p>The result was a peculiar operating model. Institutions possessed
+detailed customer information in onboarding platforms, commercial
+information in product systems, device intelligence in fraud tools,
+sanctions data in screening platforms and transaction history in
+monitoring systems. The payment message passed between them carrying far
+less context than the organisation already knew.</p>
+
+<p>We called the resulting alerts “false positives,” as if the principal
+problem were the alert. Often the real problem was missing
+information.</p>
+
+<p>The transition to ISO 20022 and other richer messaging arrangements
+creates an opportunity to reconsider that model. ISO 20022 does not
+solve financial crime. It provides a common language capable of carrying
+structured information. Whether that capacity becomes a control depends
+on the quality of the data, the governance attached to it and the
+decisions the institution designs around it.</p>
+
+<p>Payment transparency is becoming enforceable. Regulation (EU)
+2023/1113 has applied since 30 December 2024, requiring specified payer
+and payee information to accompany transfers of funds. From 1 May 2025,
+the Bank of England mandated purpose codes and Legal Entity Identifiers
+for defined CHAPS payments. FATF revised Recommendation 16 in June 2025
+and published the related assessment methodology in October. From 14
+November 2026, Swift will no longer support fully unstructured addresses
+in CBPR+ payment messages, with CHAPS aligned to reject them. The
+revised FATF requirements must take effect by the end of 2030.</p>
+
+<p>The migration, however, is not the destination.</p>
+
+<p>There is a meaningful difference between a payment message that is
+technically valid and one that supports a good financial-crime decision.
+A field can be populated with incomplete information. A structured
+address can belong to the wrong party. A purpose code can describe the
+category of a payment without explaining the commercial relationship. An
+account identifier can lead to a pooled structure that obscures the
+ultimate user.</p>
+
+<p>The control objective must therefore be broader than
+completeness.</p>
+
+<p>The payment-information chain should answer five questions:</p>
+
+<ol type="1">
+<li><p>Who are the real parties behind the payment?</p></li>
+<li><p>Why is the payment taking place?</p></li>
+<li><p>Is the route consistent with the parties and purpose?</p></li>
+<li><p>Does the activity fit what is known and expected?</p></li>
+<li><p>What decision should be made before the value becomes
+irretrievable?</p></li>
+</ol>
+
+<p>These questions connect onboarding, account issuance, payment
+initiation, messaging, screening, monitoring and investigation. They
+also expose why functional separation has become a barrier to
+effectiveness. KYC teams validate identity. Product teams configure
+accounts. Operations teams manage payment exceptions. Fraud teams
+analyse devices and social engineering. Sanctions teams screen parties.
+AML teams monitor patterns. Each function sees part of the story.</p>
+
+<p>The payment message can become the point at which those parts
+meet.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-01-instruction-to-intelligence.png" alt="From customer and account context through a structured payment message, real-time decision, investigation outcome and control learning." title="Figure 0.1 · From instruction to intelligence" loading="lazy" decoding="async">
+<figcaption>Figure 0.1 · From instruction to intelligence</figcaption></figure>
+<p>The opportunity is not to turn the message into an overloaded file
+containing every fact an institution holds. It is to create a governed
+connection between the message and the information necessary for the
+decision. Sometimes that information will travel within the payment.
+Sometimes it will be resolved internally from an account identifier,
+token or reference. Sometimes it will be retrieved through an authorised
+network service.</p>
+
+<p>What matters is that the control can reach the context when the
+decision must be made.</p>
+
+<p>This volume develops that proposition through eight chapters. It
+begins with the historical separation between payment operations and
+compliance. It then examines structured data, enforceable payment
+transparency, ultimate-party identity, contextual decisioning, upstream
+screening and artificial intelligence. It concludes with a maturity
+model for turning payment information into an adaptive control
+system.</p>
+
+<p>The message is becoming the control. The question is whether
+institutions will design it that way.</p>
+
+<div class="chapter-heading" id="chapter-1"><div class="eyebrow">CHAPTER 1</div><h1>We Treated Payment Data as Plumbing</h1><p class="chapter-dek">The industry designed messages to move money and controls to explain it afterwards.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: The weakness in many monitoring systems is
+not the sophistication of the detection model. It is the thinness of the
+information the model receives.</strong></p>
+</blockquote>
+
+<h2 id="the-historical-bargain">The historical bargain</h2>
+
+<p>Payment infrastructure was built to achieve a demanding but
+relatively narrow objective: transfer value accurately, securely and
+predictably between institutions.</p>
+
+<p>Messaging standards therefore focused on the information required to
+execute and reconcile the instruction. Compliance was layered around
+that infrastructure. Names were screened against sanctions lists.
+Transactions were evaluated against scenarios. Investigators gathered
+additional information when something looked unusual.</p>
+
+<p>This separation created an implicit bargain. Payment systems would
+move money efficiently; compliance systems would interpret risk
+separately.</p>
+
+<p>For a time, that bargain was workable. Payments moved through slower
+infrastructures, many products operated during defined windows and
+institutions could intervene through manual queues. Information lost
+from one message could sometimes be recovered through requests between
+banks or questions to the customer.</p>
+
+<p>But the bargain carried a structural weakness: the institution
+responsible for deciding whether the payment was appropriate often
+lacked the information necessary to understand it.</p>
+
+<h2 id="compliance-became-an-exercise-in-reconstruction">Compliance
+became an exercise in reconstruction</h2>
+
+<p>Consider a payment containing a payer name, beneficiary name, amount,
+currency, account details and a short free-text reference.</p>
+
+<p>Those fields may be enough to send the money. They are rarely enough
+to explain the economic event.</p>
+
+<p>Is the payer buying a service, paying a supplier, moving its own
+funds or sending money on behalf of another party? Is the beneficiary
+the ultimate recipient or an intermediary collecting for thousands of
+users? Does the reference identify an invoice, describe the payment
+honestly or contain whatever text happened to fit?</p>
+
+<p>Monitoring systems learned to work around these gaps. They used
+thresholds, velocity, geographies, counterparties and historical
+patterns as proxies for meaning. Investigators then searched across
+customer files, account notes and previous cases to assemble the context
+that did not travel with the payment.</p>
+
+<p>This was less a single control than a chain of compensating
+controls.</p>
+
+<p>The industry responded by improving the intelligence applied after
+the message was created. Rules became more complex. Machine-learning
+models found relationships across larger datasets. Case-management
+systems assembled additional evidence. These advances mattered, but they
+often left the underlying information architecture unchanged.</p>
+
+<p>We built increasingly sophisticated telescopes and continued pointing
+them through a dirty window.</p>
+
+<h2 id="faster-payments-expose-the-weakness">Faster payments expose the
+weakness</h2>
+
+<p>The separation between message and control becomes more consequential
+as payment speed increases.</p>
+
+<p>When funds move in seconds, “detect and investigate” may mean
+“understand and document after the loss.” Fraud proceeds can be
+dispersed. Sanctions exposure can become irrevocable. Mule networks can
+move value through several accounts before a conventional alert reaches
+an investigator.</p>
+
+<p>The answer cannot be to make every payment wait for a human review.
+That would defeat the purpose of modern payment systems and generate a
+queue large enough to qualify as its own national infrastructure.</p>
+
+<p>The answer is to move more intelligence into the decision path.</p>
+
+<p>That requires controls capable of distinguishing between three
+activities:</p>
+
+<ul>
+<li><p><strong>Execution:</strong> Is the instruction technically valid
+and capable of settlement?</p></li>
+<li><p><strong>Permission:</strong> Is the payment allowed under law,
+policy and product design?</p></li>
+<li><p><strong>Confidence:</strong> Is there sufficient evidence that
+the parties, purpose and behaviour are consistent with legitimate
+activity?</p></li>
+</ul>
+
+<p>Traditional messages were primarily designed for execution. Adaptive
+payment controls must support all three.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-02-old-and-emerging-architectures.png" alt="The old post-settlement control architecture compared with an emerging architecture that connects identity, purpose, enriched instructions and real-time controls." title="Figure 1.1 · The old and emerging control architectures" loading="lazy" decoding="async">
+<figcaption>Figure 1.1 · The old and emerging control architectures</figcaption></figure>
+<h2 id="data-fragmentation-is-a-control-problem">Data fragmentation is a
+control problem</h2>
+
+<p>Most institutions do not lack information. They lack connected
+information.</p>
+
+<p>Customer identity may sit in a lifecycle-management platform.
+Beneficial ownership may be stored in documents. Expected activity may
+exist in an onboarding questionnaire. Device and session data may remain
+in a fraud platform. The commercial purpose of a virtual account may
+live in a product configuration table. Payment details may be stored in
+a separate ledger.</p>
+
+<p>Each system can be correct while the overall decision remains
+incomplete.</p>
+
+<p>This is why data architecture belongs within financial-crime
+governance. If the organisation cannot connect what it knows about the
+customer with what it sees in the payment, the control environment is
+limited by design.</p>
+
+<p>Data lineage is therefore not merely a technology concern. Leaders
+should know:</p>
+
+<ul>
+<li><p>where each critical payment field originates;</p></li>
+<li><p>whether the field is supplied, verified, inferred or
+defaulted;</p></li>
+<li><p>which transformations occur across the payment chain;</p></li>
+<li><p>whether truncation or translation changes meaning;</p></li>
+<li><p>which controls rely on the field; and</p></li>
+<li><p>who is accountable when the information is missing or
+wrong.</p></li>
+</ul>
+
+<h2 id="from-principle-to-practice">From principle to practice</h2>
+
+<p>The first step is to create a payment-information inventory rather
+than another list of monitoring rules.</p>
+
+<p>For each major payment flow, map the information available at six
+points:</p>
+
+<ol type="1">
+<li><p>customer onboarding;</p></li>
+<li><p>account or virtual-account issuance;</p></li>
+<li><p>payment initiation;</p></li>
+<li><p>message construction;</p></li>
+<li><p>screening and decisioning; and</p></li>
+<li><p>investigation and reporting.</p></li>
+</ol>
+
+<p>The gaps will often be revealing. Information collected during
+onboarding may never reach screening. A product may permit an “on behalf
+of” use case without reliably capturing the ultimate party. A monitoring
+model may depend on a purpose field populated through a default
+value.</p>
+
+<p>The objective is not maximum data. It is decision-relevant data with
+known provenance.</p>
+
+<h2 id="common-failure-modes">Common failure modes</h2>
+
+<ul>
+<li><p>Treating a messaging migration as a technology programme with no
+financial-crime owner.</p></li>
+<li><p>Measuring field population without measuring accuracy or
+usefulness.</p></li>
+<li><p>Assuming screening can compensate indefinitely for missing
+ultimate-party information.</p></li>
+<li><p>Preserving separate fraud, sanctions and AML data models that
+describe the same payment differently.</p></li>
+<li><p>Enriching messages after settlement when the relevant decision
+should have occurred before it.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>What information does our monitoring system routinely attempt to
+infer because the payment does not state it?</p></li>
+<li><p>Which customer or product facts are available internally but
+absent from the decision path?</p></li>
+<li><p>Where is payment data truncated, translated, defaulted or
+overwritten?</p></li>
+<li><p>Which controls would materially improve if purpose and
+ultimate-party information were reliable?</p></li>
+<li><p>Are we modernising the message, or merely replacing its
+format?</p></li>
+</ol>
+
+<div class="chapter-heading" id="chapter-2"><div class="eyebrow">CHAPTER 2</div><h1>Structured Data Changes the Control Equation</h1><p class="chapter-dek">A common language creates control capacity, but only governance turns that capacity into effectiveness.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: ISO 20022 is not a financial-crime
+control. It is an information architecture from which better controls
+can be built.</strong></p>
+</blockquote>
+
+<h2 id="the-difference-between-text-and-structure">The difference
+between text and structure</h2>
+
+<p>Legacy payment messages often compressed important information into
+limited or free-text fields. The same fact could appear in several
+formats, positions or abbreviations. Screening tools compensated through
+fuzzy matching, transliteration logic and extensive exception
+handling.</p>
+
+<p>Structured data changes that equation. It separates parties,
+accounts, addresses, agents, remittance information and purpose into
+defined elements. That makes the information easier for machines to
+validate, compare and preserve.</p>
+
+<p>The compliance value is not simply that more characters are
+available. Structure allows the institution to understand what a piece
+of information claims to represent.</p>
+
+<p>A country in a country field can be validated as a country. A
+legal-entity identifier can be evaluated as an identifier. An ultimate
+creditor can be distinguished from the institution receiving the
+immediate instruction. A purpose code can be assessed against the
+customer, product and transaction.</p>
+
+<p>That semantic clarity creates the foundation for better controls.</p>
+
+<h2 id="a-valid-message-can-still-be-a-poor-control">A valid message can
+still be a poor control</h2>
+
+<p>Technical validity is a low bar.</p>
+
+<p>A required field can be populated with placeholder text. A structured
+address can be copied from an intermediary. A purpose code can be
+selected for operational convenience. An organisation name can be
+accurate while the underlying end user remains undisclosed.</p>
+
+<p>Institutions therefore need at least four measures of payment-data
+quality:</p>
+
+<ul>
+<li><p><strong>Completeness:</strong> Is the required information
+present?</p></li>
+<li><p><strong>Conformity:</strong> Does it follow the required format
+and permitted values?</p></li>
+<li><p><strong>Accuracy:</strong> Does it correspond to the real party,
+account or purpose?</p></li>
+<li><p><strong>Decision utility:</strong> Does it improve the control
+decision for which it is used?</p></li>
+</ul>
+
+<p>Many programmes measure the first two because systems can calculate
+them easily. The latter two require comparison with customer records,
+investigations, external evidence and outcomes.</p>
+
+<p>The difference matters. A field that is 99 per cent populated but
+routinely wrong is not a control achievement. It is an efficiently
+distributed error.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-03-payment-data-quality-stack.png" alt="Payment-data quality progressing from technical validity through completeness, accuracy and context to decision utility." title="Figure 2.1 · The payment-data quality stack" loading="lazy" decoding="async">
+<figcaption>Figure 2.1 · The payment-data quality stack</figcaption></figure>
+<h2 id="data-provenance-becomes-essential">Data provenance becomes
+essential</h2>
+
+<p>As payment messages grow richer, institutions must know where the
+information came from.</p>
+
+<p>Some data is supplied directly by the customer. Some is retrieved
+from verified onboarding records. Some is generated by the product. Some
+is added by an intermediary. Some is inferred by a model.</p>
+
+<p>Those sources do not have equal evidential weight.</p>
+
+<p>A customer-entered description of purpose should not be treated like
+a verified account-ownership record. An inferred industry code should
+not silently replace a customer’s declared business activity. An
+AI-generated summary should not be mistaken for a factual attribute
+unless the underlying evidence is available.</p>
+
+<p>Payment-data governance should therefore preserve three things:</p>
+
+<ol type="1">
+<li><p>the value;</p></li>
+<li><p>the source of the value; and</p></li>
+<li><p>the confidence or verification status attached to it.</p></li>
+</ol>
+
+<p>Without provenance, enrichment can create false confidence. The
+message appears more complete while the institution becomes less clear
+about which facts it actually knows.</p>
+
+<h2 id="harmonisation-and-the-risk-of-local-interpretation">Harmonisation
+and the risk of local interpretation</h2>
+
+<p>Common standards create interoperability only when institutions use
+them consistently.</p>
+
+<p>The CPMI’s harmonised ISO 20022 data requirements are intended to
+reduce differences across payment systems and jurisdictions. This
+matters because local implementation choices can recreate the
+fragmentation the standard was designed to solve.</p>
+
+<p>One institution may use a field for the ultimate party. Another may
+repeat the immediate party. One market may mandate a purpose code.
+Another may leave it optional. Intermediaries may translate between
+internal formats and the network message, dropping detail in the
+process.</p>
+
+<p>The control environment must therefore examine the entire chain, not
+simply the format at the point of origin.</p>
+
+<p>Institutions should test whether information survives:</p>
+
+<ul>
+<li><p>channel and API ingestion;</p></li>
+<li><p>internal ledger transformation;</p></li>
+<li><p>message creation;</p></li>
+<li><p>intermediary processing;</p></li>
+<li><p>network translation;</p></li>
+<li><p>beneficiary receipt; and</p></li>
+<li><p>returns, recalls and investigations.</p></li>
+</ul>
+
+<h2 id="from-fields-to-control-hypotheses">From fields to control
+hypotheses</h2>
+
+<p>The best way to create compliance value from structured data is to
+begin with a decision, not a field.</p>
+
+<p>Instead of asking, “How can we use purpose codes?” ask:</p>
+
+<p>“Which decisions are currently weak because payment purpose is
+unavailable or unreliable?”</p>
+
+<p>Instead of asking, “What should we do with ultimate-party elements?”
+ask:</p>
+
+<p>“Where do intermediary or platform models prevent us from seeing the
+real payer or beneficiary?”</p>
+
+<p>This creates a control hypothesis that can be tested. For
+example:</p>
+
+<blockquote>
+<p><strong>IF VERIFIED ULTIMATE-BENEFICIARY INFORMATION IS CONSISTENTLY
+AVAILABLE, SANCTIONS SCREENING SHOULD IDENTIFY RELEVANT EXPOSURE EARLIER
+AND REDUCE INVESTIGATIONS CAUSED BY SCREENING AN INTERMEDIARY AS THOUGH
+IT WERE THE END RECIPIENT.:</strong></p>
+</blockquote>
+
+<p>The institution can then measure whether the field improved
+detection, reduced ambiguity or changed intervention outcomes.</p>
+
+<h2 id="from-principle-to-practice-1">From principle to practice</h2>
+
+<p>Create a payment-data council with representation from payments,
+product, operations, financial crime, privacy, engineering and data
+governance. Its mandate should be practical:</p>
+
+<ul>
+<li><p>define critical payment-data elements;</p></li>
+<li><p>agree ownership and acceptable sources;</p></li>
+<li><p>establish quality thresholds;</p></li>
+<li><p>approve permitted defaults and transformations;</p></li>
+<li><p>identify controls dependent on each element;</p></li>
+<li><p>review outcome evidence; and</p></li>
+<li><p>prioritise remediation according to decision impact.</p></li>
+</ul>
+
+<p>This is not another governance forum created to admire a dashboard.
+It should own decisions about how payment information is collected,
+preserved and used.</p>
+
+<h2 id="common-failure-modes-1">Common failure modes</h2>
+
+<ul>
+<li><p>Declaring success when the new message passes schema
+validation.</p></li>
+<li><p>Treating optional fields as irrelevant without assessing their
+control value.</p></li>
+<li><p>Creating enrichment that cannot be traced to a source.</p></li>
+<li><p>Measuring the sender’s message without testing what the receiver
+obtains.</p></li>
+<li><p>Mandating data without considering privacy, localisation or
+proportionality.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-1">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>Which payment fields are critical to sanctions, fraud and AML
+decisions?</p></li>
+<li><p>Do we know the source and verification status of each
+field?</p></li>
+<li><p>How much information is lost through internal or external
+translation?</p></li>
+<li><p>Are data-quality metrics connected to control outcomes?</p></li>
+<li><p>Who can require remediation when a technically valid field is
+operationally useless?</p></li>
+</ol>
+
+<div class="chapter-heading" id="chapter-3"><div class="eyebrow">CHAPTER 3</div><h1>Payment Transparency Is Becoming Enforceable</h1><p class="chapter-dek">The industry is moving from permission to carry richer data toward an obligation to capture it, preserve it, test it and act on it.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT:</strong> A populated field is not evidence
+of transparency. Institutions increasingly need to show that the correct
+information survived the payment chain and influenced a defensible
+decision.</p>
+</blockquote>
+
+<h2 id="from-capability-to-obligation">From capability to
+obligation</h2>
+
+<p>For years, richer payment data was discussed mainly as an
+opportunity. ISO 20022 could carry more structured information. Purpose
+codes could explain why a payment was being made. Ultimate-party fields
+could distinguish the economic actor from an intermediary. Legal Entity
+Identifiers could improve the identification of organisations.</p>
+
+<p>The language was usually permissive: institutions were encouraged to
+populate the fields, explore the benefits and prepare for future
+adoption.</p>
+
+<p>That period is ending. Regulators, standard setters and payment
+infrastructures are converting richer data from a technical capability
+into an operating obligation. The expectation is no longer simply that
+an institution can send a modern message. It is that the institution
+captures the right information, preserves it through the chain, verifies
+what matters and can demonstrate how the information affected the
+control outcome.</p>
+
+<p>This changes the compliance conversation. A successful migration
+programme cannot end with schema validation, message acceptance or a
+dashboard showing that fields are populated. Those measures prove that
+the plumbing works. They do not prove that the control works.</p>
+
+<h2 id="the-timetable-is-no-longer-theoretical">The timetable is no
+longer theoretical</h2>
+
+<p>The direction of travel can be seen across several overlapping
+requirements:</p>
+
+<ul>
+<li><p>30 December 2024 - Regulation (EU) 2023/1113 began applying. It
+requires specified information on payers and payees to accompany
+transfers of funds and extends related transparency obligations to
+certain crypto-asset transfers.</p></li>
+<li><p>1 May 2025 - The Bank of England mandated purpose codes for
+defined CHAPS payments and Legal Entity Identifiers for payments between
+financial institutions. Non-compliance is addressed through the CHAPS
+rulebook, senior-management attestation and remediation
+planning.</p></li>
+<li><p>June and October 2025 - FATF revised Recommendation 16 and then
+published the methodology that will be used to assess compliance with
+the revised standard in mutual evaluations.</p></li>
+<li><p>14 November 2026 - Swift will stop supporting fully unstructured
+postal addresses in CBPR+ payment messages. At a minimum, town and
+country must be supplied in designated fields; invalid instructions may
+be rejected before entering the network. CHAPS is aligned to reject
+fully unstructured addresses from the same period.</p></li>
+<li><p>By the end of 2030 - FATF expects the revised Recommendation 16
+requirements to have taken effect.</p></li>
+</ul>
+
+<p>These milestones do not create one identical global rulebook. They do
+create a consistent strategic message: payment information is becoming
+part of the enforceable control environment.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-04-payment-transparency-timeline.png" alt="Payment-transparency milestones from the EU Transfer of Funds Regulation and CHAPS enhanced data through FATF Recommendation 16, structured postal addresses and the end-2030 global standard." title="Figure 3.1 · Payment transparency: from capability to obligation" loading="lazy" decoding="async">
+<figcaption>Figure 3.1 · Payment transparency: from capability to obligation</figcaption></figure>
+<h2 id="fatf-changed-the-supervisory-question">FATF changed the
+supervisory question</h2>
+
+<p>The 2025 revision of Recommendation 16 is important not only because
+it changes required information. It clarifies responsibility across the
+payment chain.</p>
+
+<p>Under the revised standard, the payment chain begins with the
+financial institution that receives the customer instruction. FATF also
+clarifies responsibility for including required information and ensuring
+that it remains unchanged, standardises information requirements for
+certain peer-to-peer cross-border payments above USD or EUR 1,000 and
+requires tools intended to protect against fraud and error, including
+verification of recipient information.</p>
+
+<p>The accompanying methodology matters just as much. It gives assessors
+a framework for examining how the revised requirements have been
+implemented. That moves the question beyond whether a jurisdiction or
+institution has reproduced the right words in law, policy or
+procedure.</p>
+
+<p>The supervisory question becomes more practical: Did the correct
+parties enter the chain? Was the information preserved? Did verification
+prevent fraud or error? Could investigators obtain what they needed?
+What happened when the information was incomplete, inconsistent or
+wrong?</p>
+
+<p>The standards do not make every participant omniscient. They make
+gaps, alterations and responsibility more visible.</p>
+
+<h2 id="capture-preserve-verify-and-evidence">Capture, preserve, verify
+and evidence</h2>
+
+<p>A mature payment-transparency control can be understood through four
+connected duties:</p>
+
+<ul>
+<li><p>Capture - obtain the required and decision-relevant information
+from the customer instruction or another governed source. The obligation
+begins with knowing what the field represents and who supplied
+it.</p></li>
+<li><p>Preserve - ensure information remains associated with the correct
+party as the instruction passes through channels, internal systems,
+intermediaries, translations, returns and recalls.</p></li>
+<li><p>Verify - apply the checks required by law, scheme rules and risk.
+Verification may include confirming recipient account information,
+validating identifiers and reconciling inconsistencies before value
+moves.</p></li>
+<li><p>Evidence - retain enough information to explain the source,
+transformation, control response, human involvement and
+outcome.</p></li>
+</ul>
+
+<p>The four duties are interdependent. Verification cannot repair
+information that was never captured. Preservation of the wrong party is
+not transparency. Evidence that a field was populated is not evidence
+that it was useful.</p>
+
+<h2 id="a-completed-field-is-not-evidence">A completed field is not
+evidence</h2>
+
+<p>Technical compliance is the beginning of the test, not the end.
+Payment information should pass through five levels of control
+quality:</p>
+
+<ul>
+<li><p>Technical validity - does the message conform to the relevant
+schema and network rules?</p></li>
+<li><p>Completeness - are the required fields present for the payment
+type and scenario?</p></li>
+<li><p>Accuracy - does the information describe the correct party,
+account, address, purpose or relationship?</p></li>
+<li><p>Context - can the institution understand the information in
+relation to the customer, product, corridor and payment
+journey?</p></li>
+<li><p>Decision utility - did the information change screening,
+verification, routing, enrichment, investigation, intervention or
+rejection?</p></li>
+</ul>
+
+<p>A field can be perfectly formatted and perfectly wrong. Compliance
+teams have met this species before.</p>
+
+<p>The evidence of effectiveness is therefore not the existence of the
+field. It is the difference the information made. Institutions should be
+able to show what was prevented, clarified, accelerated or escalated
+because the data was available and trustworthy.</p>
+
+<h2 id="virtual-accounts-add-another-transparency-layer">Virtual
+accounts add another transparency layer</h2>
+
+<p>Virtual accounts deserve a specific caution, but they are not the
+central argument. A virtual identifier, the underlying customer or user
+and the settlement account may not be the same party or object.</p>
+
+<ul>
+<li><p>Visible identifier - what the payer or payment message may
+show.</p></li>
+<li><p>Underlying party - the customer or user associated with that
+identifier.</p></li>
+<li><p>Settlement account - where the funds ultimately settle.</p></li>
+</ul>
+
+<p>The European Banking Authority's May 2024 report found divergent
+virtual-IBAN models and differences in how authorities interpreted and
+applied regulatory requirements. It highlighted issues involving
+money-laundering and terrorist-financing risk, authorisation,
+passporting, consumer and depositor protection and regulatory
+arbitrage.</p>
+
+<p>The relevant compliance question is attribution: can the payment be
+linked to the correct underlying party throughout the chain, and can
+each institution understand which party it is expected to identify,
+screen or investigate?</p>
+
+<p>Virtual accounts should therefore be treated as an additional
+transparency challenge within the payment architecture, not as a
+substitute for it. The EBA report is the sensible starting point for a
+deeper assessment of the particular model.</p>
+
+<h2 id="what-supervisors-can-reasonably-ask">What supervisors can
+reasonably ask</h2>
+
+<p>As transparency requirements become more specific, institutions
+should expect questions that cross compliance, payments, product,
+operations and technology:</p>
+
+<ul>
+<li><p>Which legal, regulatory, scheme and network requirements apply to
+each material payment flow?</p></li>
+<li><p>Which information must be captured, and which additional fields
+are critical to the institution's own control decisions?</p></li>
+<li><p>Who owns each field, source, transformation and
+exception?</p></li>
+<li><p>How has the institution tested that party, address, purpose and
+identifier data survive the complete journey?</p></li>
+<li><p>What happens when information is missing, inconsistent,
+unverified or technically invalid?</p></li>
+<li><p>What evidence demonstrates that the information improved fraud,
+sanctions or AML outcomes?</p></li>
+</ul>
+
+<p>A policy response alone will be insufficient. The evidence sits in
+messages, decision records, exception handling, remediation plans,
+testing results and actual payment outcomes.</p>
+
+<h2 id="from-deadline-management-to-control-architecture">From deadline
+management to control architecture</h2>
+
+<p>The safest response is not to treat each milestone as a separate
+compliance project. Institutions need one payment-transparency
+architecture capable of absorbing different requirements without
+rebuilding the control every time a rule, field or market changes.</p>
+
+<p>That architecture should connect:</p>
+
+<ul>
+<li><p>an obligation-to-field map showing what each rule
+requires;</p></li>
+<li><p>a critical-data inventory showing source, provenance and
+owner;</p></li>
+<li><p>end-to-end journey testing across channels, products,
+intermediaries and returns;</p></li>
+<li><p>decision logic explaining which information affects screening,
+verification and intervention;</p></li>
+<li><p>exception rules for repair, enrichment, hold, rejection and
+escalation; and</p></li>
+<li><p>outcome measures showing whether the data improved the
+control.</p></li>
+</ul>
+
+<p>A 2030 implementation date is not an invitation to discover in 2029
+that a customer channel stores the address in one free-text field last
+redesigned when fax machines had opinions. The architecture work begins
+with current systems, current data and current payment journeys.</p>
+
+<h2 id="from-principle-to-practice-2">From principle to practice</h2>
+
+<p>Select one material cross-border payment flow and create a
+payment-transparency readiness record:</p>
+
+<ul>
+<li><p>identify the applicable obligations and implementation
+dates;</p></li>
+<li><p>map the customer instruction through every internal and external
+transformation;</p></li>
+<li><p>compare required fields with the information the institution
+actually captures;</p></li>
+<li><p>test whether immediate and ultimate parties remain correctly
+attributed;</p></li>
+<li><p>record the verification and recipient-checking controls;</p></li>
+<li><p>define what happens when information is missing or
+contradictory;</p></li>
+<li><p>measure which decisions changed because of the information;
+and</p></li>
+<li><p>assign an accountable owner and remediation date for every
+material gap.</p></li>
+</ul>
+
+<p>The objective is not a beautiful inventory. It is a payment flow that
+can withstand operational failure, supervisory challenge and the
+occasional customer who enters 'N/A' with astonishing confidence.</p>
+
+<h2 id="common-failure-modes-2">Common failure modes</h2>
+
+<ul>
+<li><p>Treating ISO 20022 adoption as proof that payment transparency
+has been achieved.</p></li>
+<li><p>Mapping regulatory obligations to policies without mapping them
+to fields, systems and decisions.</p></li>
+<li><p>Measuring field population without testing accuracy, provenance
+or preservation.</p></li>
+<li><p>Allowing intermediaries or internal transformations to replace
+the underlying party with the visible account holder.</p></li>
+<li><p>Preparing for the 2030 FATF deadline without addressing the 2026
+network requirements.</p></li>
+<li><p>Documenting exceptions without changing the decision, remediation
+or product architecture.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-2">Questions for Leaders</h2>
+
+<ul>
+<li><p>Which payment-transparency obligations apply to our most material
+flows today?</p></li>
+<li><p>Can we prove that required information survives from customer
+instruction to beneficiary receipt?</p></li>
+<li><p>Which populated fields are technically valid but operationally
+unreliable?</p></li>
+<li><p>Can our controls resolve a virtual identifier to the correct
+underlying party?</p></li>
+<li><p>What decisions change when richer information is
+available?</p></li>
+<li><p>What evidence would satisfy a supervisor that the control works
+in practice?</p></li>
+</ul>
+
+<div class="chapter-heading" id="chapter-4"><div class="eyebrow">CHAPTER 4</div><h1>Identity Must Travel With the Money</h1><p class="chapter-dek">Payment transparency depends on preserving the real parties through every layer of the transaction.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: An account name identifies the visible
+account holder. It does not always identify the person for whom the
+payment is being made.</strong></p>
+</blockquote>
+
+<h2 id="immediate-parties-and-ultimate-parties">Immediate parties and
+ultimate parties</h2>
+
+<p>Modern payment chains involve more than a sender and receiver.</p>
+
+<p>A marketplace may collect for a merchant. A payroll provider may pay
+employees for a corporate client. A payment platform may receive funds
+into virtual accounts on behalf of customers. A correspondent bank may
+process an instruction for another institution. A digital wallet may sit
+between the payer and the final beneficiary.</p>
+
+<p>In these structures, the immediate debtor and creditor may not be the
+ultimate economic parties.</p>
+
+<p>That distinction has always mattered to financial-crime compliance.
+Richer payment messages make it possible to represent it more
+clearly.</p>
+
+<p>ISO 20022 includes elements capable of distinguishing immediate and
+ultimate parties in appropriate “on behalf of” scenarios. The Bank of
+England’s enhanced-data requirements for CHAPS, for example, describe
+how ultimate debtor and ultimate creditor elements should be used when
+another party sits behind the immediate debtor or creditor.</p>
+
+<p>The principle is simple: the payment chain should not replace the
+real party with the intermediary merely because the intermediary holds
+the account.</p>
+
+<h2 id="identity-is-more-than-a-name">Identity is more than a name</h2>
+
+<p>Names remain important, particularly for sanctions screening. But a
+name alone is a weak identity architecture.</p>
+
+<p>Different people share names. Organisations trade under brands.
+Characters are transliterated. Intermediaries populate their own
+address. Fraudsters use mule accounts with legitimate account-holder
+names.</p>
+
+<p>A stronger payment identity can combine:</p>
+
+<ul>
+<li><p>verified name;</p></li>
+<li><p>account identifier;</p></li>
+<li><p>date or place of birth where appropriate;</p></li>
+<li><p>registered address;</p></li>
+<li><p>legal-entity identifier or registration number;</p></li>
+<li><p>country of incorporation or residence;</p></li>
+<li><p>role in the payment;</p></li>
+<li><p>relationship to the immediate account holder; and</p></li>
+<li><p>verification source.</p></li>
+</ul>
+
+<p>Not all fields should travel in every payment. Privacy,
+proportionality and law matter. But the control should be able to
+resolve the visible party to a reliable identity.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-05-identity-chain.png" alt="The payment identity chain from the ultimate debtor through account holders, payment service providers and intermediaries to the ultimate creditor." title="Figure 4.1 · The identity chain" loading="lazy" decoding="async">
+<figcaption>Figure 4.1 · The identity chain</figcaption></figure>
+<h2 id="identity-must-survive-transformation">Identity must survive
+transformation</h2>
+
+<p>Payment data can degrade as it moves.</p>
+
+<p>A platform may capture an underlying customer but fail to include it
+in the outbound message. An intermediary may translate the message into
+another format. A receiving institution may store only selected fields.
+A return payment may not preserve the original party information.</p>
+
+<p>The result is identity decay: each participant sees a technically
+processable payment with less context than the participant before
+it.</p>
+
+<p>Institutions should test identity continuity through real payment
+journeys. Synthetic test cases should include:</p>
+
+<ul>
+<li><p>direct account-to-account payments;</p></li>
+<li><p>on-behalf-of payments;</p></li>
+<li><p>virtual accounts;</p></li>
+<li><p>pooled and omnibus structures;</p></li>
+<li><p>cross-border intermediary chains;</p></li>
+<li><p>returns and recalls; and</p></li>
+<li><p>non-Latin names and addresses.</p></li>
+</ul>
+
+<p>The test should compare what the initiator knows, what it sends, what
+each intermediary receives and what the beneficiary institution
+ultimately stores.</p>
+
+<h2 id="verification-and-confidence">Verification and confidence</h2>
+
+<p>Payment identity should carry an evidential status.</p>
+
+<p>Was the name entered by the payer? Retrieved from a verified customer
+profile? Confirmed through an account-name service? Supplied by an
+intermediary? Inferred from a narrative?</p>
+
+<p>Controls can use these distinctions. A mismatch involving a verified
+beneficiary identity may warrant different treatment from a mismatch
+against unverified payer-entered text. An ultimate party supplied by a
+regulated partner under a governed arrangement may carry different
+confidence from a free-text reference.</p>
+
+<p>This creates a move from binary data to confidence-aware data.</p>
+
+<p>The payment does not merely say, “This is the beneficiary.” It allows
+the control to understand, “This beneficiary identity was verified
+through this source at this time.”</p>
+
+<h2 id="transparency-and-privacy-are-joint-design-requirements">Transparency
+and privacy are joint design requirements</h2>
+
+<p>More identity data is not automatically better.</p>
+
+<p>Payment information crosses borders, institutions and legal regimes.
+Unnecessary personal data can create privacy, security and misuse risk.
+Excessive requirements can also exclude customers whose local documents
+or address conventions do not fit a standard model.</p>
+
+<p>The design question is therefore not “How much identity can we
+attach?” It is “What is the minimum reliable identity necessary for the
+participants to fulfil their responsibilities?”</p>
+
+<p>That requires collaboration between compliance, privacy, security,
+legal and product teams. Privacy should not be invoked as a reason to
+preserve opacity, and compliance should not be invoked as a reason to
+collect everything.</p>
+
+<h2 id="from-principle-to-practice-3">From principle to practice</h2>
+
+<p>Create an ultimate-party transparency policy for products involving
+platforms, virtual accounts, pooled structures or intermediaries.</p>
+
+<p>The policy should define:</p>
+
+<ul>
+<li><p>when immediate and ultimate parties differ;</p></li>
+<li><p>which party information must be captured;</p></li>
+<li><p>how it is verified;</p></li>
+<li><p>what travels externally;</p></li>
+<li><p>what can be resolved internally;</p></li>
+<li><p>how confidence is represented;</p></li>
+<li><p>how privacy requirements are applied; and</p></li>
+<li><p>when insufficient transparency prevents the payment or
+relationship.</p></li>
+</ul>
+
+<p>The policy should be tested against actual messages, not only
+contractual descriptions.</p>
+
+<h2 id="common-failure-modes-3">Common failure modes</h2>
+
+<ul>
+<li><p>Screening only the immediate account holder.</p></li>
+<li><p>Repeating the same party in immediate and ultimate
+fields.</p></li>
+<li><p>Assuming a regulated intermediary always knows its underlying
+user.</p></li>
+<li><p>Losing party information during translation or return
+processing.</p></li>
+<li><p>Treating unverified payer-entered names as verified
+identity.</p></li>
+<li><p>Collecting excessive identity data without a defined control
+purpose.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-3">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>Where do our products move money on behalf of another
+party?</p></li>
+<li><p>Can sanctions and AML controls see the ultimate parties?</p></li>
+<li><p>Which identity attributes are verified, supplied or
+inferred?</p></li>
+<li><p>Does identity survive the complete payment journey?</p></li>
+<li><p>Where does privacy law limit sharing, and what alternative
+control provides equivalent transparency?</p></li>
+</ol>
+
+<div class="chapter-heading" id="chapter-5"><div class="eyebrow">CHAPTER 5</div><h1>Context Is the Missing Control</h1><p class="chapter-dek">The same payment can be ordinary or suspicious depending on the relationship and purpose behind it.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: Transaction monitoring frequently produces
+ambiguity because it observes movement without understanding the
+economic event.</strong></p>
+</blockquote>
+
+<h2 id="the-limits-of-isolated-attributes">The limits of isolated
+attributes</h2>
+
+<p>Amount, country, counterparty and frequency are useful signals. None
+explains a payment on its own.</p>
+
+<p>A large international transfer may represent a suspicious movement of
+funds, a property purchase, an intercompany treasury transfer or payment
+for a legitimate shipment. A first-time beneficiary may be a mule, a new
+supplier or an employee receiving expenses. Multiple payments of similar
+value may be structuring or the normal output of a marketplace.</p>
+
+<p>Controls become stronger when they can compare the transaction with
+its declared and observed context.</p>
+
+<p>Context includes:</p>
+
+<ul>
+<li><p>the purpose of the payment;</p></li>
+<li><p>the relationship between the parties;</p></li>
+<li><p>the customer’s business model;</p></li>
+<li><p>the product and account configuration;</p></li>
+<li><p>expected geography and currency;</p></li>
+<li><p>invoice or remittance information;</p></li>
+<li><p>prior behaviour;</p></li>
+<li><p>device and initiation signals; and</p></li>
+<li><p>the wider network of related payments.</p></li>
+</ul>
+
+<p>The objective is not to explain away unusual activity. It is to
+distinguish risk-relevant inconsistency from novelty.</p>
+
+<h2 id="purpose-should-be-testable">Purpose should be testable</h2>
+
+<p>Purpose codes and remittance information can improve transparency,
+but only if they influence the decision.</p>
+
+<p>A purpose code should be evaluated against what the institution
+knows. A payroll payment initiated from a business account should have
+characteristics consistent with payroll. A property-related payment
+should align with the customer, amount and counterparties. A transfer
+marked as internal should involve accounts under common control.</p>
+
+<p>When purpose conflicts with behaviour, the conflict is a signal.</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li><p>“salary” payments sent to many unrelated businesses;</p></li>
+<li><p>“own account” transfers where ownership cannot be
+matched;</p></li>
+<li><p>“refunds” materially exceeding original purchases;</p></li>
+<li><p>“supplier” payments inconsistent with the customer’s
+industry;</p></li>
+<li><p>personal remittances routed through a commercial collection
+structure; and</p></li>
+<li><p>virtual accounts used for purposes outside the approved
+programme.</p></li>
+</ul>
+
+<p>The control value comes from validation, not from accepting the
+label.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-06-context-pyramid.png" alt="A context pyramid connecting payment fields, customer and account profile, party relationships, commercial purpose and network behaviour." title="Figure 5.1 · The context pyramid" loading="lazy" decoding="async">
+<figcaption>Figure 5.1 · The context pyramid</figcaption></figure>
+<h2 id="context-can-reduce-false-positives-without-weakening-controls">Context
+can reduce false positives without weakening controls</h2>
+
+<p>False-positive reduction is often framed as a tuning exercise: change
+thresholds, suppress known parties or add exceptions.</p>
+
+<p>Context offers a different approach.</p>
+
+<p>If a control knows that two accounts share verified ownership, it can
+evaluate a transfer differently without simply exempting it. If a
+virtual account is linked to a specific invoice and payer, the
+institution can distinguish the expected payment from unrelated credits.
+If a merchant’s business model explains a seasonal increase, the model
+can incorporate the expected pattern while still monitoring
+counterparties and deviations.</p>
+
+<p>This is more defensible than broad suppression because the decision
+is based on evidence.</p>
+
+<p>It also improves investigations. Instead of presenting an analyst
+with an alert and asking them to search for context, the system can
+present the transaction, relevant customer facts, relationship evidence,
+purpose, inconsistencies and the reason the control escalated.</p>
+
+<h2 id="context-has-a-shelf-life">Context has a shelf life</h2>
+
+<p>Customer expectations change.</p>
+
+<p>A business enters a new market. Ownership changes. A platform
+launches a new product. A customer begins using an account for a
+different purpose. Economic disruption changes payment patterns.</p>
+
+<p>Context must therefore be refreshed through observed behaviour and
+customer events. Static onboarding declarations should not become
+permanent truth.</p>
+
+<p>Adaptive controls treat expected activity as a living model:</p>
+
+<ol type="1">
+<li><p>begin with declared purpose and expected behaviour;</p></li>
+<li><p>compare with early actual activity;</p></li>
+<li><p>identify material differences;</p></li>
+<li><p>seek explanation or evidence where necessary;</p></li>
+<li><p>update the profile through governed decisions; and</p></li>
+<li><p>retain the history of what changed and why.</p></li>
+</ol>
+
+<p>This avoids two extremes: treating every deviation as suspicious or
+silently rewriting expectations to match whatever the customer does.</p>
+
+<h2 id="the-shared-context-problem">The shared-context problem</h2>
+
+<p>No single institution sees every part of a cross-border payment.</p>
+
+<p>The originator institution knows the payer. The beneficiary
+institution may know the recipient. An intermediary sees the route. A
+platform may understand the commercial purpose. A fraud service may
+detect device compromise.</p>
+
+<p>Better outcomes require governed forms of collaboration: structured
+payment data, requests for information, network utilities, shared
+typologies and public-private partnerships.</p>
+
+<p>But collaboration must be designed. Institutions need clarity on
+which data can be shared, for what purpose, under which legal basis and
+with what assurance of accuracy.</p>
+
+<p>The Financial Stability Board has identified divergence across
+payment, AML, sanctions and privacy data frameworks as a source of
+cross-border friction. The challenge is not merely to collect context.
+It is to make necessary context interoperable without turning the
+payment chain into an uncontrolled exchange of customer data.</p>
+
+<h2 id="from-principle-to-practice-4">From principle to practice</h2>
+
+<p>For each high-risk payment flow, define a minimum context
+standard:</p>
+
+<ul>
+<li><p>verified party identity;</p></li>
+<li><p>relationship between payer and beneficiary;</p></li>
+<li><p>payment purpose;</p></li>
+<li><p>expected account use;</p></li>
+<li><p>relevant invoice or transaction reference;</p></li>
+<li><p>geography and currency logic;</p></li>
+<li><p>initiation channel and device confidence; and</p></li>
+<li><p>programme or platform relationship.</p></li>
+</ul>
+
+<p>Then identify which context is required to execute, which is required
+to control, which can be retrieved on demand and which should not be
+shared.</p>
+
+<h2 id="common-failure-modes-4">Common failure modes</h2>
+
+<ul>
+<li><p>Treating customer-supplied purpose as verified fact.</p></li>
+<li><p>Suppressing alerts for expected activity without monitoring
+changes.</p></li>
+<li><p>Keeping product and commercial context outside the
+financial-crime data model.</p></li>
+<li><p>Requiring every institution to collect the same information
+independently.</p></li>
+<li><p>Sharing data without provenance, purpose limitation or quality
+controls.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-4">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>Which alerts exist primarily because the control lacks
+context?</p></li>
+<li><p>Can we validate payment purpose against customer and counterparty
+information?</p></li>
+<li><p>How are expected-activity profiles updated?</p></li>
+<li><p>What context does another participant hold that would materially
+improve our decision?</p></li>
+<li><p>What information should not travel with the payment, and how can
+it be retrieved safely when needed?</p></li>
+</ol>
+
+<div class="chapter-heading" id="chapter-6"><div class="eyebrow">CHAPTER 6</div><h1>Screening Moves Upstream</h1><p class="chapter-dek">The best alert is often the payment that was safely redirected, paused or prevented before settlement.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: Faster payments require earlier decisions.
+A control that operates after irrevocable settlement may be informative
+without being preventive.</strong></p>
+</blockquote>
+
+<h2 id="from-retrospective-detection-to-intervention">From retrospective
+detection to intervention</h2>
+
+<p>Traditional monitoring is frequently post-transaction. The payment
+settles, activity is aggregated and an alert is generated according to a
+schedule.</p>
+
+<p>That remains important for pattern detection and regulatory
+reporting. But it is insufficient for payment environments in which
+funds can move and disperse immediately.</p>
+
+<p>Upstream control begins before payment initiation.</p>
+
+<p>Customer permissions, account configuration, virtual-account
+restrictions, beneficiary setup and transaction limits all influence
+which payments can occur. The payment message then supplies information
+for screening and real-time decisioning. Post-transaction monitoring
+examines the wider pattern and feeds learning back into earlier
+stages.</p>
+
+<p>The control system is therefore a continuum:</p>
+
+<ol type="1">
+<li><p><strong>Design-time controls</strong> define permitted products
+and use cases.</p></li>
+<li><p><strong>Issuance controls</strong> determine who receives
+accounts and capabilities.</p></li>
+<li><p><strong>Pre-initiation controls</strong> evaluate access, device,
+beneficiary and intent.</p></li>
+<li><p><strong>In-flight controls</strong> screen parties, message data
+and risk signals.</p></li>
+<li><p><strong>Post-event controls</strong> identify patterns and
+emerging typologies.</p></li>
+<li><p><strong>Feedback controls</strong> change permissions, models and
+data requirements.</p></li>
+</ol>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-07-control-moves-upstream.png" alt="Financial-crime control moving upstream from monitoring after settlement to product design, account issuance, payment initiation and in-flight decisions." title="Figure 6.1 · Control moves upstream" loading="lazy" decoding="async">
+<figcaption>Figure 6.1 · Control moves upstream</figcaption></figure>
+<h2 id="the-payment-message-as-a-decision-surface">The payment message
+as a decision surface</h2>
+
+<p>An enriched message can support multiple actions, not merely approve
+or decline.</p>
+
+<p>Depending on risk, law and scheme rules, a control might:</p>
+
+<ul>
+<li><p>allow the payment;</p></li>
+<li><p>request missing or corrected information;</p></li>
+<li><p>require stronger customer authentication;</p></li>
+<li><p>reduce the permitted amount;</p></li>
+<li><p>route the payment for review;</p></li>
+<li><p>hold or delay execution where legally permitted;</p></li>
+<li><p>reject the instruction;</p></li>
+<li><p>block or freeze property as required;</p></li>
+<li><p>restrict the account or beneficiary; or</p></li>
+<li><p>permit the payment while increasing subsequent
+monitoring.</p></li>
+</ul>
+
+<p>This range matters because binary controls create pressure toward
+either excessive friction or excessive tolerance.</p>
+
+<p>Adaptive decisioning uses proportional responses tied to confidence
+and consequence.</p>
+
+<h2 id="sanctions-fraud-and-aml-see-the-same-payment-differently">Sanctions,
+fraud and AML see the same payment differently</h2>
+
+<p>A sanctions control asks whether a prohibited party, jurisdiction or
+interest is involved. A fraud control asks whether the instruction was
+authorised and whether the beneficiary or behaviour indicates deception.
+An AML control asks whether the payment forms part of suspicious
+activity.</p>
+
+<p>These objectives differ, but the information overlaps.</p>
+
+<p>A name mismatch may indicate sanctions evasion, account takeover or
+innocent data quality. A newly created beneficiary in a high-risk
+corridor may be a fraud signal, an AML signal or both. A virtual account
+receiving unrelated third-party payments may indicate misuse of the
+programme, mule activity or laundering.</p>
+
+<p>Separate tools can remain necessary, but the decision architecture
+should reconcile their outputs.</p>
+
+<p>The payment should not be approved by one control, rejected by
+another and queued indefinitely by a third while each system remains
+blissfully unaware of the others.</p>
+
+<h2 id="latency-becomes-a-control-metric">Latency becomes a control
+metric</h2>
+
+<p>Institutions traditionally measure alert volumes, false positives and
+investigation time. Faster payments require additional measures:</p>
+
+<ul>
+<li><p>time from risk signal to decision;</p></li>
+<li><p>percentage of relevant decisions made before settlement;</p></li>
+<li><p>time to propagate restrictions across channels and
+accounts;</p></li>
+<li><p>time to incorporate confirmed fraud or sanctions
+intelligence;</p></li>
+<li><p>value prevented or recovered;</p></li>
+<li><p>customer friction created by intervention; and</p></li>
+<li><p>quality of explanations for automated decisions.</p></li>
+</ul>
+
+<p>The objective is not the fastest possible decision. It is a sound
+decision within the time available.</p>
+
+<h2 id="designing-safe-fallback">Designing safe fallback</h2>
+
+<p>Real-time controls will occasionally lack information or experience a
+service failure.</p>
+
+<p>The fallback design is part of the control. Institutions should
+determine:</p>
+
+<ul>
+<li><p>which payments may proceed under degraded conditions;</p></li>
+<li><p>which require a hold or alternative screening path;</p></li>
+<li><p>how queues are prioritised;</p></li>
+<li><p>how long decisions remain valid;</p></li>
+<li><p>how manual overrides are governed; and</p></li>
+<li><p>how missed controls are identified and remediated.</p></li>
+</ul>
+
+<p>“The screening service was unavailable” is an incident description,
+not a risk decision.</p>
+
+<h2 id="from-principle-to-practice-5">From principle to practice</h2>
+
+<p>Map each material financial-crime decision to the earliest point at
+which sufficient information exists.</p>
+
+<p>If the risk can be controlled at product design, do not wait for
+monitoring. If it can be controlled at account issuance, do not wait for
+the first payment. If it requires network behaviour, preserve the
+post-transaction control but feed the outcome back into permissions and
+real-time decisioning.</p>
+
+<p>Create a decision record containing:</p>
+
+<ul>
+<li><p>information considered;</p></li>
+<li><p>control or model version;</p></li>
+<li><p>confidence and material uncertainty;</p></li>
+<li><p>action taken;</p></li>
+<li><p>legal or policy basis;</p></li>
+<li><p>human involvement;</p></li>
+<li><p>customer impact; and</p></li>
+<li><p>subsequent outcome.</p></li>
+</ul>
+
+<p>This creates the evidence needed to learn.</p>
+
+<h2 id="common-failure-modes-5">Common failure modes</h2>
+
+<ul>
+<li><p>Applying real-time technology to a decision that still depends on
+manual data retrieval.</p></li>
+<li><p>Treating all uncertainty as a decline.</p></li>
+<li><p>Allowing product permissions and compliance controls to
+conflict.</p></li>
+<li><p>Measuring screening latency without measuring decision
+quality.</p></li>
+<li><p>Building no governed fallback for outages or incomplete
+data.</p></li>
+<li><p>Failing to feed confirmed outcomes back into upstream
+controls.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-5">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>Which financial-crime decisions currently occur after funds are
+irretrievable?</p></li>
+<li><p>What earlier control could prevent or contain the risk?</p></li>
+<li><p>Can sanctions, fraud and AML outputs be reconciled in one payment
+decision?</p></li>
+<li><p>What happens when critical data or screening services are
+unavailable?</p></li>
+<li><p>Do we measure prevention and intervention, or only alerts and
+investigations?</p></li>
+</ol>
+
+<div class="chapter-heading" id="chapter-7"><div class="eyebrow">CHAPTER 7</div><h1>AI Learns to Read the Payment</h1><p class="chapter-dek">Artificial intelligence can connect the fields, relationships and history around a payment, but authority must remain governed.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: The value of AI is not that it can read
+more payment data. It is that it can identify which parts of the story
+do not agree.</strong></p>
+</blockquote>
+
+<h2 id="from-matching-to-interpretation">From matching to
+interpretation</h2>
+
+<p>Traditional screening compares selected fields with lists, rules or
+thresholds. Machine learning expands the pattern recognition. Generative
+and agentic systems add another capability: they can assemble
+information, describe relationships and explain inconsistencies in
+language that investigators and decision-makers can understand.</p>
+
+<p>For a payment, an AI system might compare:</p>
+
+<ul>
+<li><p>the parties named in the message;</p></li>
+<li><p>verified customer and beneficial-owner information;</p></li>
+<li><p>virtual-account purpose and permissions;</p></li>
+<li><p>historical counterparties;</p></li>
+<li><p>invoice or remittance details;</p></li>
+<li><p>device and initiation data;</p></li>
+<li><p>sanctions and adverse intelligence;</p></li>
+<li><p>network connections; and</p></li>
+<li><p>similar confirmed cases.</p></li>
+</ul>
+
+<p>The system can then explain that the payment is unusual not simply
+because it is large, but because the stated purpose conflicts with the
+customer’s business, the beneficiary is new, the virtual account was
+issued for collections rather than outbound transfers and related
+accounts show similar routing.</p>
+
+<p>That is closer to reasoning about the payment than matching a single
+field.</p>
+
+<h2 id="the-explanation-must-remain-evidence-based">The explanation must
+remain evidence-based</h2>
+
+<p>AI-generated narratives can be persuasive. Persuasion is not
+proof.</p>
+
+<p>Every material statement should be traceable to evidence. The user
+should be able to distinguish:</p>
+
+<ul>
+<li><p>facts retrieved from verified records;</p></li>
+<li><p>information supplied by the customer;</p></li>
+<li><p>external intelligence;</p></li>
+<li><p>model inferences;</p></li>
+<li><p>unresolved uncertainty; and</p></li>
+<li><p>the AI system’s summary.</p></li>
+</ul>
+
+<p>This is particularly important when AI compresses a complex payment
+journey into a short explanation. The summary may be useful while
+omitting contradictory evidence or overstating confidence.</p>
+
+<p>The system should show its work without requiring the investigator to
+become a data engineer.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-08-ai-payment-intelligence-loop.png" alt="An AI payment-intelligence loop that assembles evidence, compares context, explains inconsistencies, recommends action, supports a governed decision and learns from the outcome." title="Figure 7.1 · The AI payment-intelligence loop" loading="lazy" decoding="async">
+<figcaption>Figure 7.1 · The AI payment-intelligence loop</figcaption></figure>
+<h2 id="authority-should-follow-consequence">Authority should follow
+consequence</h2>
+
+<p>Not every AI use case requires the same oversight.</p>
+
+<p>An AI system that organises evidence for an investigator carries
+different risk from one that recommends closing an account. A system
+that requests a missing address differs from one that blocks property. A
+model that prioritises a queue differs from one that executes a payment
+decision.</p>
+
+<p>Governance should classify use cases according to:</p>
+
+<ul>
+<li><p>decision authority;</p></li>
+<li><p>financial and customer consequence;</p></li>
+<li><p>legal significance;</p></li>
+<li><p>reversibility;</p></li>
+<li><p>data sensitivity;</p></li>
+<li><p>model uncertainty; and</p></li>
+<li><p>availability of effective human review.</p></li>
+</ul>
+
+<p>The phrase “human in the loop” is not enough. Leaders should know
+which human, reviewing what evidence, within what time, with what
+authority and under what workload.</p>
+
+<h2 id="ai-agents-and-the-message">AI agents and the message</h2>
+
+<p>The next stage is not limited to AI analysing payments. AI agents may
+initiate them.</p>
+
+<p>An agent could select a supplier, agree terms, create an instruction
+and authorise payment within delegated limits. This creates new identity
+questions:</p>
+
+<ul>
+<li><p>Which person or organisation authorised the agent?</p></li>
+<li><p>What scope and spending limits apply?</p></li>
+<li><p>How is the agent identified in the payment information?</p></li>
+<li><p>Can the receiving institution distinguish agent-initiated
+activity?</p></li>
+<li><p>What happens when the agent’s action conflicts with the
+principal’s intent?</p></li>
+<li><p>Who is responsible for monitoring changes in the agent’s
+behaviour?</p></li>
+</ul>
+
+<p>The payment message may need to represent both the legal principal
+and the initiating agent or service. Otherwise, institutions may see a
+valid customer payment without understanding how the decision was
+made.</p>
+
+<p>Agentic payments make the principle of provenance even more
+important. The control must know not only who owns the account, but what
+actor initiated the instruction and under which authority.</p>
+
+<h2 id="continuous-model-management">Continuous model management</h2>
+
+<p>AI operating on payment data will drift as customers, products, fraud
+methods, sanctions risks and message quality change.</p>
+
+<p>Model management should monitor:</p>
+
+<ul>
+<li><p>changes in field availability and population;</p></li>
+<li><p>changes in customer and corridor behaviour;</p></li>
+<li><p>performance across languages and geographies;</p></li>
+<li><p>explanation quality;</p></li>
+<li><p>false-negative and false-positive indicators;</p></li>
+<li><p>investigator agreement and override;</p></li>
+<li><p>customer impact;</p></li>
+<li><p>incidents and near misses; and</p></li>
+<li><p>performance after material product or policy changes.</p></li>
+</ul>
+
+<p>Validation remains important, but periodic validation cannot be the
+only mechanism. A model interpreting live payment behaviour begins
+encountering new conditions immediately.</p>
+
+<h2 id="from-principle-to-practice-6">From principle to practice</h2>
+
+<p>Begin with bounded use cases where AI improves information quality
+and human decisioning:</p>
+
+<ul>
+<li><p>detecting missing or inconsistent message information;</p></li>
+<li><p>assembling payment and customer context;</p></li>
+<li><p>explaining why multiple signals conflict;</p></li>
+<li><p>prioritising cases;</p></li>
+<li><p>drafting targeted requests for information; and</p></li>
+<li><p>identifying clusters for investigator review.</p></li>
+</ul>
+
+<p>Expand authority only when evidence demonstrates reliable
+performance, effective oversight and controlled consequences.</p>
+
+<p>Every AI-supported decision should retain:</p>
+
+<ul>
+<li><p>the model and version;</p></li>
+<li><p>the input evidence;</p></li>
+<li><p>the output and explanation;</p></li>
+<li><p>the action taken;</p></li>
+<li><p>human review or override;</p></li>
+<li><p>the final outcome; and</p></li>
+<li><p>feedback used for improvement.</p></li>
+</ul>
+
+<h2 id="common-failure-modes-6">Common failure modes</h2>
+
+<ul>
+<li><p>Treating an eloquent explanation as a correct
+explanation.</p></li>
+<li><p>Hiding source uncertainty inside a single risk score.</p></li>
+<li><p>Giving AI authority before establishing outcome
+evidence.</p></li>
+<li><p>Using “human review” as a label without workload or decision
+design.</p></li>
+<li><p>Failing to capture that an AI agent initiated the
+payment.</p></li>
+<li><p>Validating the model while ignoring deterioration in payment-data
+quality.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-6">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>Which AI statements can be traced directly to evidence?</p></li>
+<li><p>Where does the system infer rather than know?</p></li>
+<li><p>What decisions can the AI recommend, and which can it
+execute?</p></li>
+<li><p>How will an agent-initiated payment identify both agent and
+principal?</p></li>
+<li><p>What evidence would cause us to reduce or withdraw model
+authority?</p></li>
+</ol>
+
+<div class="chapter-heading" id="chapter-8"><div class="eyebrow">CHAPTER 8</div><h1>The Message Becomes the Control</h1><p class="chapter-dek">The mature organisation turns payment information into a continuously improving system of prevention, decision and learning.</p></div>
+<blockquote>
+<p><strong>EXECUTIVE INSIGHT: Rich payment data creates strategic value
+only when it changes decisions, improves outcomes and teaches the
+organisation what to do next.</strong></p>
+</blockquote>
+
+<h2 id="from-message-migration-to-control-transformation">From message
+migration to control transformation</h2>
+
+<p>The industry has reached an important milestone. Major payment
+infrastructures have adopted richer structured standards. Cross-border
+transparency expectations are strengthening. Institutions can carry more
+information and process it more consistently than legacy messages
+allowed.</p>
+
+<p>But migration alone does not create effectiveness.</p>
+
+<p>The strategic opportunity is to connect five capabilities:</p>
+
+<ol type="1">
+<li><p><strong>Identity:</strong> reliable understanding of the parties
+and their roles.</p></li>
+<li><p><strong>Purpose:</strong> evidence of the economic reason for the
+payment.</p></li>
+<li><p><strong>Context:</strong> customer, account, product and network
+information.</p></li>
+<li><p><strong>Decisioning:</strong> proportionate action within the
+available time.</p></li>
+<li><p><strong>Learning:</strong> outcomes that improve data,
+permissions and controls.</p></li>
+</ol>
+
+<p>When these capabilities operate together, the payment message becomes
+an active control surface.</p>
+
+<h2 id="the-payment-message-control-maturity-model">The Payment Message
+Control Maturity Model</h2>
+
+<p>Institutions can assess maturity across five stages.</p>
+
+<h3 id="stage-1-transport">Stage 1: Transport</h3>
+
+<p>The message carries the minimum information necessary to execute and
+reconcile the payment. Financial-crime controls operate largely outside
+the message and after initiation.</p>
+
+<p>Success is measured through processing accuracy, alert completion and
+operational compliance.</p>
+
+<h3 id="stage-2-structured">Stage 2: Structured</h3>
+
+<p>The institution adopts defined fields and common standards. Data is
+machine-readable, but quality remains focused on technical validity and
+population.</p>
+
+<p>Success is measured through schema compliance, field completion and
+reduced repair.</p>
+
+<h3 id="stage-3-enriched">Stage 3: Enriched</h3>
+
+<p>Payment data is connected with verified identity, underlying-party
+attribution, purpose and customer context. Provenance and confidence are
+visible.</p>
+
+<p>Success is measured through improved attribution, fewer information
+gaps and better investigative decisions.</p>
+
+<h3 id="stage-4-decisioning">Stage 4: Decisioning</h3>
+
+<p>Structured and enriched information supports real-time sanctions,
+fraud and AML action. Controls can apply proportionate interventions
+before or during execution.</p>
+
+<p>Success is measured through prevention, decision quality, latency,
+explainability and customer impact.</p>
+
+<h3 id="stage-5-adaptive">Stage 5: Adaptive</h3>
+
+<p>Investigation outcomes, confirmed fraud, sanctions intelligence,
+regulatory change and model performance continuously improve message
+requirements, account permissions and decision logic.</p>
+
+<p>Success is measured through learning speed, resilience and control
+effectiveness.</p>
+
+<figure class="volume-figure"><img src="../assets/adaptive-compliance/volume-4/figure-09-payment-message-control-maturity-model.png" alt="A five-stage maturity model progressing from transport to structured, enriched, decisioning and adaptive payment controls." title="Figure 8.1 · The Payment Message Control Maturity Model" loading="lazy" decoding="async">
+<figcaption>Figure 8.1 · The Payment Message Control Maturity Model</figcaption></figure>
+<h2 id="maturity-is-uneven-by-design">Maturity is uneven by design</h2>
+
+<p>An institution will not sit neatly at one stage.</p>
+
+<p>Sanctions screening may operate in real time while AML monitoring
+remains post-event. Underlying-party data may be highly reliable in one
+product while another relies on sparse references. One payment rail may
+preserve ultimate-party information while another truncates it.</p>
+
+<p>The maturity model should therefore be applied by payment flow and
+capability.</p>
+
+<p>Leaders should identify:</p>
+
+<ul>
+<li><p>the current stage;</p></li>
+<li><p>the target stage justified by risk and use;</p></li>
+<li><p>the information or governance gap;</p></li>
+<li><p>the outcome expected from improvement; and</p></li>
+<li><p>the evidence that will demonstrate progress.</p></li>
+</ul>
+
+<p>Not every payment requires Stage 5 sophistication. The goal is
+appropriate maturity, not technological maximalism.</p>
+
+<h2 id="the-operating-model">The operating model</h2>
+
+<p>The message becomes the control only when ownership crosses
+traditional boundaries.</p>
+
+<p>Payments teams own execution and network requirements. Product teams
+own customer journeys and capabilities. Compliance defines risk outcomes
+and legal obligations. Fraud teams understand initiation and deception.
+Data teams govern information. Engineering builds decision paths.
+Operations manages exceptions. Privacy and security protect the
+data.</p>
+
+<p>The operating model should include:</p>
+
+<ul>
+<li><p>a payment-data council;</p></li>
+<li><p>a cross-functional control owner for each material flow;</p></li>
+<li><p>a critical-data-element inventory;</p></li>
+<li><p>decision and model governance;</p></li>
+<li><p>end-to-end testing;</p></li>
+<li><p>outcome-based metrics;</p></li>
+<li><p>incident learning; and</p></li>
+<li><p>a roadmap connecting regulatory change with product and
+infrastructure change.</p></li>
+</ul>
+
+<h2 id="measuring-what-the-message-creates">Measuring what the message
+creates</h2>
+
+<p>Traditional migration metrics remain necessary: message acceptance,
+repair rates, field population and operational stability.</p>
+
+<p>Control metrics should go further:</p>
+
+<ul>
+<li><p>verified ultimate-party coverage;</p></li>
+<li><p>underlying-party attribution across virtual, pooled and
+intermediary structures;</p></li>
+<li><p>purpose-data accuracy;</p></li>
+<li><p>information preserved end to end;</p></li>
+<li><p>decisions made before settlement;</p></li>
+<li><p>preventable losses or exposures avoided;</p></li>
+<li><p>reduction in investigation time due to available
+context;</p></li>
+<li><p>overrides and decision reversals;</p></li>
+<li><p>customer friction;</p></li>
+<li><p>time from confirmed typology to control change; and</p></li>
+<li><p>percentage of control changes supported by outcome
+evidence.</p></li>
+</ul>
+
+<p>These measures shift the conversation from “Did we populate the
+field?” to “Did the information improve the decision?”</p>
+
+<h2 id="trust-travels-with-the-payment">Trust travels with the
+payment</h2>
+
+<p>Payment innovation is frequently described through speed, cost and
+availability.</p>
+
+<p>Those benefits matter. But the ability to move money faster is
+valuable only when institutions can trust the parties, purpose and
+controls surrounding the movement.</p>
+
+<p>Richer messages can reduce ambiguity. Strong attribution can preserve
+the real parties through virtual, pooled and intermediary structures.
+Upstream screening can prevent harm. AI can assemble and explain
+evidence. None of these operates safely without governance, provenance
+and learning.</p>
+
+<p>The message becomes the control when it carries or unlocks the
+information required to decide, when that decision occurs in time to
+matter and when the outcome improves the next payment.</p>
+
+<p>That is adaptive compliance applied to the movement of money.</p>
+
+<h2 id="from-principle-to-practice-7">From principle to practice</h2>
+
+<p>Leaders can begin with four actions:</p>
+
+<ol type="1">
+<li><p>Select one material payment flow and map its information end to
+end.</p></li>
+<li><p>Identify the three information gaps creating the greatest control
+ambiguity.</p></li>
+<li><p>Move one material decision to the earliest safe point in the
+lifecycle.</p></li>
+<li><p>Establish an outcome measure and use it to govern the next
+change.</p></li>
+</ol>
+
+<p>The work does not require a grand transformation programme before it
+can begin. In fact, any transformation programme requiring its own
+transformation programme should probably be treated as an emerging
+risk.</p>
+
+<h2 id="common-failure-modes-7">Common failure modes</h2>
+
+<ul>
+<li><p>Declaring the payment-message programme complete at technical
+migration.</p></li>
+<li><p>Pursuing maximum data without a defined decision
+purpose.</p></li>
+<li><p>Building real-time decisions without fallback, explanation or
+appeal.</p></li>
+<li><p>Treating virtual-account, KYC, fraud, sanctions and AML data as
+separate domains.</p></li>
+<li><p>Measuring activity rather than effectiveness.</p></li>
+<li><p>Learning from incidents without changing the information or
+decision architecture.</p></li>
+</ul>
+
+<h2 id="questions-for-leaders-7">Questions for Leaders</h2>
+
+<ol type="1">
+<li><p>At what maturity stage is each material payment flow?</p></li>
+<li><p>Which information gap creates the greatest current risk?</p></li>
+<li><p>What decisions can be moved earlier without disproportionate
+friction?</p></li>
+<li><p>Do our metrics demonstrate better outcomes or simply more
+complete messages?</p></li>
+<li><p>How quickly does a confirmed case change what happens to the next
+payment?</p></li>
+</ol>
+
+<h1 id="toolkit">Toolkit</h1>
+
+<h2 id="the-payment-intelligence-operating-model">The Payment
+Intelligence Operating Model</h2>
+
+<p>This toolkit translates the volume’s central argument into four
+practical artefacts.</p>
+
+<h2 id="payment-information-inventory">1. Payment-Information
+Inventory</h2>
+
+<p>For each material flow, document:</p>
+
+<ul>
+<li><p>product and payment rail;</p></li>
+<li><p>customer and end-user structure;</p></li>
+<li><p>account and virtual-account model;</p></li>
+<li><p>immediate and ultimate parties;</p></li>
+<li><p>purpose and remittance information;</p></li>
+<li><p>source and verification status of critical fields;</p></li>
+<li><p>transformations across the chain;</p></li>
+<li><p>sanctions, fraud and AML controls;</p></li>
+<li><p>decision timing;</p></li>
+<li><p>outcome and feedback mechanisms; and</p></li>
+<li><p>accountable owner.</p></li>
+</ul>
+
+<h2 id="payment-transparency-readiness-record">2. Payment Transparency
+Readiness Record</h2>
+
+<p>For each material payment flow, retain:</p>
+
+<ul>
+<li><p>applicable legal, regulatory, scheme and network
+requirements;</p></li>
+<li><p>originating customer instruction and capture channel;</p></li>
+<li><p>required and decision-critical party, address, purpose and
+identifier fields;</p></li>
+<li><p>source, verification status and provenance for each critical
+field;</p></li>
+<li><p>rules for preservation, translation and transformation;</p></li>
+<li><p>evidence of what downstream institutions receive;</p></li>
+<li><p>recipient-verification and fraud-prevention controls;</p></li>
+<li><p>repair, enrichment, hold, rejection and escalation
+rules;</p></li>
+<li><p>accountable owners and remediation dates;</p></li>
+<li><p>testing results and control exceptions;</p></li>
+<li><p>decision and customer outcomes; and</p></li>
+<li><p>approval, challenge and review dates.</p></li>
+</ul>
+
+<h2 id="payment-decision-record">3. Payment Decision Record</h2>
+
+<p>For automated or materially assisted decisions, capture:</p>
+
+<ul>
+<li><p>payment and customer identifiers;</p></li>
+<li><p>information considered;</p></li>
+<li><p>source and confidence;</p></li>
+<li><p>control or model version;</p></li>
+<li><p>sanctions, fraud and AML outputs;</p></li>
+<li><p>action and timing;</p></li>
+<li><p>legal or policy basis;</p></li>
+<li><p>human involvement and override;</p></li>
+<li><p>customer impact;</p></li>
+<li><p>investigation outcome; and</p></li>
+<li><p>feedback applied.</p></li>
+</ul>
+
+<h2 id="executive-scorecard">4. Executive Scorecard</h2>
+
+<p>The executive scorecard should balance five categories:</p>
+
+<p><strong>Information</strong></p>
+
+<ul>
+<li><p>critical-field completeness and accuracy;</p></li>
+<li><p>verified ultimate-party coverage;</p></li>
+<li><p>underlying-party attribution across virtual, pooled and
+intermediary structures;</p></li>
+<li><p>end-to-end preservation.</p></li>
+</ul>
+
+<p><strong>Decision</strong></p>
+
+<ul>
+<li><p>pre-settlement decision coverage;</p></li>
+<li><p>latency by risk and action;</p></li>
+<li><p>overrides and reversals;</p></li>
+<li><p>explanation quality.</p></li>
+</ul>
+
+<p><strong>Outcome</strong></p>
+
+<ul>
+<li><p>prevented or contained exposure;</p></li>
+<li><p>confirmed fraud and suspicious-activity yield;</p></li>
+<li><p>customer friction;</p></li>
+<li><p>investigation time.</p></li>
+</ul>
+
+<p><strong>Resilience</strong></p>
+
+<ul>
+<li><p>service degradation and fallback performance;</p></li>
+<li><p>time to propagate restrictions;</p></li>
+<li><p>data-quality incidents;</p></li>
+<li><p>control coverage during outages.</p></li>
+</ul>
+
+<p><strong>Learning</strong></p>
+
+<ul>
+<li><p>time from outcome to control change;</p></li>
+<li><p>typology adoption;</p></li>
+<li><p>model and policy drift;</p></li>
+<li><p>repeat incidents.</p></li>
+</ul>
+
+<h1 id="references-and-further-reading">References and Further
+Reading</h1>
+
+<p>1. Financial Action Task Force, “FATF updates Standards on
+Recommendation 16 on Payment Transparency,” 18 June 2025. <a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/update-Recommendation-16-payment-transparency-june-2025.html" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>2. Financial Action Task Force, *The FATF Recommendations*, updated
+October 2025, Recommendation 16. <a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>3. Committee on Payments and Market Infrastructures, *Harmonised ISO
+20022 Data Requirements for Enhancing Cross-Border Payments*, updated
+February 2026. <a href="https://www.bis.org/cpmi/publ/d230.htm" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>4. Committee on Payments and Market Infrastructures, *Navigating the
+ISO 20022 Migration Journey*, April 2026. <a href="https://www.bis.org/cpmi/publ/brief11.htm" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>5. Swift, “ISO 20022: A New Era for Global Payments,” 25 November
+2025. <a href="https://www.swift.com/news-events/news/iso-20022-new-era-global-payments" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>6. Swift, “ISO 20022 Milestone for November 2026: Unstructured
+Addresses to Be Removed,” 25 March 2026. <a href="https://www.swift.com/news-events/news/iso-20022-milestone-november-2026-unstructured-addresses-be-removed" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>7. European Banking Authority, *Report on Virtual IBANs*, May 2024.
+<a href="https://www.eba.europa.eu/sites/default/files/2024-05/612f03de-965a-4157-b638-1b4c5b081f87/EBA%20Report%20on%20virtual%20IBANs.pdf" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>8. Bank of England, “Mandating ISO 20022 Enhanced Data in CHAPS,”
+April 2024. <a href="https://www.bankofengland.co.uk/paper/2024/policy-statement/mandating-iso-20022-enhanced-data-in-chaps" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>9. Financial Stability Board, *Recommendations to Promote Alignment
+and Interoperability Across Data Frameworks Related to Cross-Border
+Payments*, December 2024. <a href="https://www.fsb.org/2024/12/recommendations-to-promote-alignment-and-interoperability-across-data-frameworks-related-to-cross-border-payments-final-report/" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>10. Wolfsberg Group, *Payment Transparency Standards*, October 2023.
+<a href="https://wolfsberg-group.org/news/publication-of-the-updated-wolfsberg-group-payment-transparency-standards" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>11. Wolfsberg Group, *Guidance on Payment Transparency - Roles and
+Responsibilities*, December 2024. <a href="https://wolfsberg-group.org/news/wolfsberg-guidance-on-payment-transparency-roles-and-responsibilities" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>12. Board of Governors of the Federal Reserve System, “Payment
+Innovation and the Information Value of ISO 20022,” remarks by Governor
+Christopher J. Waller, May 2024. <a href="https://www.federalreserve.gov/newsevents/speech/waller20240517a.htm" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<p>13. European Union, Regulation (EU) 2023/1113 on information
+accompanying transfers of funds and certain crypto-assets, applicable
+from 30 December 2024. <a href="https://eur-lex.europa.eu/eli/reg/2023/1113/oj" target="_blank" rel="noopener"><u>Official
+source</u></a></p>
+
+<h1 id="about-the-author">About the Author</h1>
+
+<p>Micheal Sheehy is a global financial-services and payments compliance
+executive with experience leading large-scale transformation across
+anti-money laundering, sanctions, customer lifecycle management, fraud,
+transaction monitoring, data, technology and model governance.</p>
+
+<p>His work focuses on the future of adaptive compliance: how financial
+institutions can combine better information, modern technology,
+accountable governance and organisational learning to improve control
+effectiveness while enabling responsible growth.</p>
+
+<p>He is the author of *The Adaptive Compliance Series*.</p>
+
+<p>Contact: micheal@michealsheehy.com</p>
+
+<p>Website: https://michealsheehy.com</p>
+
+
+      <div class="article-end"><p><strong>Continue the conversation.</strong> For speaking, media or advisory enquiries, <a href="../contact.html">contact Micheal</a>.</p></div>
+    </article>
+  </div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© 2026 Micheal Sheehy</span><span>Payments · Compliance · Adaptive Governance</span></div></footer>
+<script src="../script.js"></script>
+</body>
+</html>
