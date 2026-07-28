@@ -25,15 +25,16 @@
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
 
-  if (!links.querySelector('a[data-home-link]')) {
-    const home = document.createElement('a');
+  let home = links.querySelector('a[data-home-link]');
+  if (!home) {
+    home = document.createElement('a');
     home.href = '/';
     home.textContent = 'Home';
     home.dataset.homeLink = 'true';
-    if (location.pathname === '/' || location.pathname.endsWith('/index.html')) {
-      home.setAttribute('aria-current', 'page');
-    }
     links.prepend(home);
+  }
+  if (location.pathname === '/' || location.pathname.endsWith('/index.html')) {
+    home.setAttribute('aria-current', 'page');
   }
 
   if (!links.id) links.id = 'primary-navigation';
