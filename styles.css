@@ -174,3 +174,20 @@ p{margin:0 0 18px}
 @media(max-width:1040px){.adaptive-page .series-volume-card{grid-template-columns:100px minmax(0,1fr) 280px;gap:25px}.adaptive-page .series-volume-rail strong{font-size:4.35rem}}
 @media(max-width:850px){.adaptive-page .series-volume-card{grid-template-columns:1fr}.adaptive-page .series-volume-rail{align-self:auto;min-height:auto;flex-direction:row;justify-content:flex-start;gap:10px;border-right:0;border-bottom:1px solid var(--line);padding-bottom:15px}.adaptive-page .series-volume-rail strong{font-size:2rem}.adaptive-page .series-volume-art{grid-row:2}.adaptive-page .series-volume-art img{max-height:330px}.adaptive-page .series-volume-copy{grid-row:3}}
 @media(max-width:520px){.adaptive-page .series-volume-card{padding:24px 22px}.adaptive-page .series-volume-actions{align-items:flex-start;flex-direction:column;gap:13px}.adaptive-page .series-volume-actions .button{width:100%}.speaking-collage,.speaking-collage img{min-height:300px}}
+
+
+/* 2026-07-29 — roadmap architecture */
+.footer-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:16px}
+.footer-links a{color:inherit;text-decoration:none;font-size:.82rem;font-weight:750;opacity:.78}
+.footer-links a:hover{opacity:1;text-decoration:underline}
+.selected-appearances .compact-proof{grid-template-columns:repeat(3,minmax(0,1fr))}
+.selected-appearances .compact-proof div{min-height:126px}
+.selected-appearances .compact-proof a{color:var(--dark);text-decoration:none}
+.selected-appearances .compact-proof a:hover{text-decoration:underline}
+.topic-hub-grid .card{display:flex;flex-direction:column;min-height:290px}
+.topic-hub-grid .card .read{margin-top:auto}
+.article-related{border-top:1px solid var(--line)}
+.article-related .card{display:flex;flex-direction:column;min-height:240px}
+.article-related .card .read{margin-top:auto}
+@media(max-width:850px){.selected-appearances .compact-proof{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.footer-inner{align-items:flex-start;gap:14px}.footer-links{justify-content:flex-start}.selected-appearances .compact-proof{grid-template-columns:1fr}.selected-appearances .compact-proof div{min-height:auto}}
