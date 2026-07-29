@@ -16,9 +16,45 @@
   <meta property="og:image" content="https://www.michealsheehy.com/assets/nasdaq-tradetalks-screenshot.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "@id":"https://www.michealsheehy.com/media.html#collection",
+    "url":"https://www.michealsheehy.com/media.html",
+    "name":"Media and Appearances | Micheal Sheehy",
+    "about":{"@id":"https://www.michealsheehy.com/about.html#person"},
+    "hasPart":[
+      {
+        "@type":"VideoObject",
+        "name":"Adaptive Compliance: How AI Is Transforming Risk and Compliance",
+        "description":"Micheal Sheehy introduces Adaptive Compliance and the move from static rules toward continuous intelligence and accountable AI.",
+        "thumbnailUrl":"https://img.youtube.com/vi/BkJjhDJyO48/maxresdefault.jpg",
+        "uploadDate":"2026-07-29",
+        "embedUrl":"https://www.youtube.com/embed/BkJjhDJyO48",
+        "contentUrl":"https://youtu.be/BkJjhDJyO48"
+      },
+      {
+        "@type":"VideoObject",
+        "name":"How Financial Institutions Are Utilizing AI and Machine Learning Technology to Combat Fraud",
+        "thumbnailUrl":"https://www.michealsheehy.com/assets/nasdaq-tradetalks-screenshot.png",
+        "uploadDate":"2024-10-17",
+        "url":"https://www.nasdaq.com/videos/how-financial-institutions-are-utilizing-ai-and-machine-learning-technology-combat-fraud"
+      }
+    ]
+  }
+  </script>
+
   <link href="styles.css" rel="stylesheet"/>
 
   <style>
+    .adaptive-media-feature{max-width:940px;margin:0 auto;padding:36px;border:1px solid var(--line);border-radius:28px;background:var(--dark);color:#fff;box-shadow:0 20px 50px rgba(23,33,29,.14)}
+    .adaptive-media-feature__head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(280px,1.2fr);gap:34px;align-items:end;margin-bottom:24px}
+    .adaptive-media-feature h2{color:#fff;margin:9px 0 0}.adaptive-media-feature p{color:#cbd3ce;margin:0}
+    .adaptive-media-feature__video{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:18px;background:#081b15}
+    .adaptive-media-feature__video iframe{display:block;width:100%;height:100%;border:0}
+    @media(max-width:720px){.adaptive-media-feature{padding:22px}.adaptive-media-feature__head{grid-template-columns:1fr;gap:12px}}
+
     .media-page .page-hero{
       background:linear-gradient(180deg,rgba(255,255,255,.38),transparent);
     }
@@ -371,6 +407,15 @@
     </div>
   </section>
 
+  <section class="section section-soft" aria-labelledby="adaptive-media-title">
+    <div class="container">
+      <article class="adaptive-media-feature">
+        <div class="adaptive-media-feature__head"><div><div class="eyebrow">Featured · Adaptive Compliance</div><h2 id="adaptive-media-title">Why compliance must adapt.</h2></div><p>A concise introduction to the operating model behind the eight-volume series: continuous intelligence, model governance, accountable AI and human judgment.</p></div>
+        <div class="adaptive-media-feature__video"><iframe src="https://www.youtube-nocookie.com/embed/BkJjhDJyO48" title="Adaptive Compliance: How AI Is Transforming Risk and Compliance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="media-section-head">
@@ -499,12 +544,7 @@
             <iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6994325153224527872?compact=1" title="Micheal Sheehy discussing compliance technology at Money20/20"></iframe>
           </div>
 
-          <div class="money-video-fallback">
-            <strong>Video not appearing?</strong>
-            <p>LinkedIn may block embedded posts because of browser privacy settings or account visibility. The original public post remains available directly.</p>
-            <a class="button button-dark" href="https://www.linkedin.com/feed/update/urn:li:activity:6994325153895596032/" rel="noopener noreferrer" target="_blank">Watch on LinkedIn ↗</a>
           </div>
-        </div>
       </article>
     </div>
   </section>
