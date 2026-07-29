@@ -150,3 +150,102 @@
     host.appendChild(utility);
   }
 })();
+
+
+// Google Analytics 4 and conversion measurement
+(() => {
+  const measurementId = 'G-P9LKM1MH8H';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', measurementId, {
+    anonymize_ip: true,
+    transport_type: 'beacon'
+  });
+
+  const analyticsScript = document.createElement('script');
+  analyticsScript.async = true;
+  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  document.head.appendChild(analyticsScript);
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    const absoluteUrl = link.href || href;
+    const label = (link.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120);
+
+    if (/^(mailto:|tel:)/i.test(href)) {
+      window.gtag('event', 'contact_click', {
+        contact_method: href.startsWith('mailto:') ? 'email' : 'phone',
+        link_text: label
+      });
+      return;
+    }
+
+    if (link.hasAttribute('download') || /\.(pdf|docx|pptx|xlsx|zip)(\?|#|$)/i.test(href)) {
+      window.gtag('event', 'file_download', {
+        file_name: decodeURIComponent(href.split('/').pop()?.split(/[?#]/)[0] || ''),
+        link_text: label,
+        link_url: absoluteUrl
+      });
+    }
+
+    if (link.classList.contains('button')) {
+      window.gtag('event', 'cta_click', {
+        link_text: label,
+        link_url: absoluteUrl,
+        page_path: window.location.pathname
+      });
+    }
+
+    try {
+      const target = new URL(absoluteUrl, window.location.href);
+      if (/^https?:$/.test(target.protocol) && target.hostname !== window.location.hostname) {
+        window.gtag('event', 'outbound_click', {
+          link_domain: target.hostname,
+          link_text: label,
+          link_url: target.href
+        });
+      }
+    } catch (_) {}
+  });
+
+  const videoFrames = [...document.querySelectorAll('iframe[src*="youtube.com/embed/"], iframe[src*="youtube-nocookie.com/embed/"]')];
+  if (!videoFrames.length) return;
+
+  const existingReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    if (typeof existingReady === 'function') existingReady();
+    videoFrames.forEach((frame) => {
+      const videoId = (frame.src.match(/\/embed\/([^?&]+)/) || [])[1] || 'unknown';
+      let started = false;
+      try {
+        new window.YT.Player(frame, {
+          events: {
+            onStateChange: ({ data }) => {
+              if (data === window.YT.PlayerState.PLAYING && !started) {
+                started = true;
+                window.gtag('event', 'video_start', {
+                  video_id: videoId,
+                  video_title: frame.title || 'Embedded video'
+                });
+              }
+              if (data === window.YT.PlayerState.ENDED) {
+                window.gtag('event', 'video_complete', {
+                  video_id: videoId,
+                  video_title: frame.title || 'Embedded video'
+                });
+              }
+            }
+          }
+        });
+      } catch (_) {}
+    });
+  };
+
+  const youtubeApi = document.createElement('script');
+  youtubeApi.src = 'https://www.youtube.com/iframe_api';
+  youtubeApi.async = true;
+  document.head.appendChild(youtubeApi);
+})();
