@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.michealsheehy.com/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/about.html</loc><lastmod>2026-07-29</lastmod></url>
-  <url><loc>https://www.michealsheehy.com/insights.html</loc><lastmod>2026-07-29</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/insights.html</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://www.michealsheehy.com/adaptive-compliance.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/adaptive-compliance-manuscript.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/case-studies.html</loc><lastmod>2026-07-29</lastmod></url>
@@ -29,6 +29,7 @@
   <url><loc>https://www.michealsheehy.com/articles/your-new-platform-is-not-a-transformation.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/the-safest-customer-is-not-the-customer-you-refused-to-understand.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/global-standards-local-proof.html</loc><lastmod>2026-07-29</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/articles/know-your-agent.html</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/global-kyc-not-translation.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/ai-agents-compliance.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/c-suite-leadership.html</loc><lastmod>2026-07-29</lastmod></url>
@@ -43,8 +44,8 @@
   <url><loc>https://www.michealsheehy.com/case-studies/global-operations.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/case-studies/modernizing-transaction-monitoring.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/case-studies/sanctions-screening-transformation.html</loc><lastmod>2026-07-29</lastmod></url>
-  <url><loc>https://www.michealsheehy.com/topics/adaptive-ai.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.michealsheehy.com/topics/global-payments-financial-crime.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michealsheehy.com/topics/adaptive-ai.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michealsheehy.com/topics/global-payments-financial-crime.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.michealsheehy.com/topics/transformation-at-scale.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.michealsheehy.com/topics/leadership-identity.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
