@@ -1,0 +1,41 @@
+name: Update Know Your Agent social metadata v2
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-kya-social-meta-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-meta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Open Graph and Twitter metadata
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('articles/know-your-agent.html')
+          s = p.read_text()
+          old = 'https://www.michealsheehy.com/assets/insights/know-your-agent-social.png'
+          new = 'https://www.michealsheehy.com/assets/insights/know-your-agent-social-v2.png'
+          if old in s:
+              s = s.replace(old, new)
+          marker = '<meta property="og:image:alt" content="Know Your Agent: The Next Identity Challenge in Payments"/>'
+          extra = marker + '\n<meta property="og:image:type" content="image/png"/>\n<meta property="og:image:width" content="1200"/>\n<meta property="og:image:height" content="627"/>'
+          if '<meta property="og:image:width"' not in s:
+              s = s.replace(marker, extra)
+          twitter = '<meta name="twitter:image" content="https://www.michealsheehy.com/assets/insights/know-your-agent-social-v2.png"/>'
+          if twitter in s and '<meta name="twitter:image:alt"' not in s:
+              s = s.replace(twitter, twitter + '\n<meta name="twitter:image:alt" content="Know Your Agent: The Next Identity Challenge in Payments"/>')
+          p.write_text(s)
+          PY
+      - name: Commit metadata update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles/know-your-agent.html
+          git diff --cached --quiet || git commit -m "Version Know Your Agent social preview metadata"
+          git push
