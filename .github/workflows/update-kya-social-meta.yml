@@ -1,0 +1,35 @@
+name: Update Know Your Agent social metadata
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-kya-social-meta.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-meta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Open Graph and Twitter image metadata
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('articles/know-your-agent.html')
+          s = p.read_text()
+          old = 'https://www.michealsheehy.com/micheal-sheehy-headshot.jpg'
+          new = 'https://www.michealsheehy.com/assets/insights/know-your-agent-social.png'
+          if old not in s:
+              raise SystemExit('Expected old social image URL not found')
+          s = s.replace(old, new)
+          p.write_text(s)
+          PY
+      - name: Commit metadata update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles/know-your-agent.html
+          git diff --cached --quiet || git commit -m "Use Know Your Agent social preview image"
+          git push
