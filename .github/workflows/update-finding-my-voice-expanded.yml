@@ -1,0 +1,141 @@
+name: Update Finding My Voice expanded essay
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-finding-my-voice-expanded.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-essay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace essay body while preserving images and page design
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p = Path('articles/personal-side-of-being-a-cco.html')
+          s = p.read_text()
+          new_body = r'''<article class="prose">
+<p class="standfirst">When people think about the role of a Chief Compliance Officer, they tend to imagine regulators, board meetings, audits, enforcement actions, investigations and difficult conversations with the business. All of that is part of the job, but it is not the part I think about most.</p>
+<h2 id="human">The greatest responsibility is human</h2>
+<p>The greatest responsibility I carry as a leader is not regulatory. It is human.</p>
+<p>Every morning, hundreds of people around the world come to work inside an organization that my leadership team and I have helped shape. They are relying on us to give them direction, purpose, context and opportunity, but perhaps most importantly, they are relying on us to create an environment where they feel safe enough to speak. They need to know that asking a difficult question will not damage their career, that challenging a senior leader is not an act of disloyalty, and that saying “I think we are wrong” is sometimes exactly what the organization needs from them.</p>
+<p>That responsibility can feel heavier to me than almost any regulatory examination because systems can be redesigned, policies can be rewritten and technology can be replaced. The way people experience leadership tends to stay with them much longer.</p>
+<p>When I look back at how I learned to lead, a surprising amount of it began long before I knew what a Chief Compliance Officer was. It began with being gay.</p>
+<h2 id="identity">Growing up gay taught me to read the room</h2>
+<p>I grew up in Ireland in the 1980s and 1990s, at a time when homosexuality was still criminalized. It was decriminalized in 1993, but laws often change faster than culture does, and as a child you do not really understand the legislation anyway. You understand the room.</p>
+<p>You understand the joke that everyone else laughs at, the tone someone uses when they describe somebody as gay, and which parts of yourself seem to attract attention. Fairly quickly, you become good at assessing people. Is this person safe? How much of myself can I show here? Should I make a joke before somebody else does? Should I push back, change the subject or stay quiet?</p>
+<p>That constant calculation teaches you something about human behavior very early. You learn that people often communicate just as much through what they do not say as through what they do. You become sensitive to tension, notice changes in tone and develop an instinct for where power sits in a room. You see who feels comfortable speaking, who is waiting for permission and who has already decided it is safer not to say anything.</p>
+<p>Those instincts were originally about self-preservation. Years later, I realized they were also leadership skills.</p>
+<h3>I was not particularly good at disappearing</h3>
+<p>There was another complication: I was a fairly flamboyant child, so the option of quietly blending into the background was never especially realistic.</p>
+<p>I could either spend an enormous amount of energy trying to remove the parts of myself that attracted attention, or I could find a way to become comfortable with them. I chose, perhaps not always consciously, to lean in, and humor became a big part of that. If I could make the room laugh, I could often control the tension before the tension controlled me.</p>
+<p>What was probably a defense mechanism at the time eventually became something I relied on throughout my career. I learned how to build rapport quickly, make uncomfortable subjects easier to discuss and use humor without diminishing the seriousness of the issue. I also learned that people are much more willing to engage with difficult information when they do not feel they are being lectured at.</p>
+<div class="childhood-gallery" aria-label="Childhood photographs of Micheal Sheehy"><figure><img src="../assets/insights/micheal-childhood-performing.webp?v=20260728-1" alt="Micheal Sheehy as a child performing with a microphone and papers in hand" width="837" height="2048" loading="lazy" decoding="async"/><figcaption>Finding a microphone early—and apparently arriving prepared.</figcaption></figure><figure><img src="../assets/insights/micheal-childhood-dingle.webp" alt="Micheal Sheehy as a child on a beach in Ireland with a black dog" width="300" height="734" loading="lazy" decoding="async"/><figcaption>Growing up in Ireland, with the confidence and freedom that existed alongside the harder parts.</figcaption></figure></div>
+<p>That turns out to be quite useful in compliance. A significant part of the CCO role is translation. You may be explaining a highly technical regulatory issue to a board, telling a product executive why a particular risk matters, asking for significant investment in infrastructure that is invisible to most customers, or explaining to a commercial leader why something they have worked on for months cannot proceed in its current form. The substance matters enormously, but so does how you communicate it.</p>
+<blockquote>Being correct and being understood are not the same thing.</blockquote>
+<h2 id="coming-out">Coming out is not one event</h2>
+<p>People sometimes talk about “coming out” as though it happens once. For most gay people, it does not. It happens repeatedly: every new job, every new team, every new manager, a new client, a customer dinner, a conference, a conversation in an airport lounge.</p>
+<p>Someone asks what you did over the weekend. Someone asks whether you have a wife. Someone asks who you travelled with. In that moment, you make a tiny decision about whether to correct the assumption, mention your husband naturally, avoid the subject or move the conversation along.</p>
+<p>Most of these moments are completely uneventful, but that does not mean the calculation disappears. The mental process often happens automatically. You read the room, assess the risk and decide how much of yourself to reveal.</p>
+<p>For years, I thought that was simply part of being gay. Only later did I realize how tiring it can be to continually edit yourself in small ways, and how much energy becomes available when you stop doing it.</p>
+<h3>Authenticity does not mean never thinking about the room</h3>
+<p>I sometimes dislike the way authenticity is discussed in leadership. “Bring your whole self to work” sounds great on a poster, but reality is more complicated.</p>
+<p>Being yourself does not mean every room becomes comfortable. There are still judgments, assumptions and moments when you are conscious of being different, and seniority does not magically remove any of that. Sometimes it actually makes it stranger. You may be the most senior person in the room and still notice yourself making the same calculations you learned as a teenager.</p>
+<p>What changed for me was not that I stopped noticing the room. It was that I stopped allowing the room to decide who I was going to be. That took much longer than I expected.</p>
+<h2 id="voice">Strangely, becoming more senior made me quieter</h2>
+<p>One of the biggest surprises of becoming a Chief Compliance Officer was that, for a while, I became less like myself.</p>
+<p>The more senior I became, the more I started thinking about how an executive was supposed to behave. I was surrounded by people who were older than me, or who had been executives longer than I had, and I watched how they spoke, presented and handled disagreement. Somewhere along the way, I began unconsciously trying to imitate an idea of senior leadership rather than simply doing the job in the way that had gotten me there.</p>
+<p>I second-guessed instincts that had served me well throughout my career. I held back opinions and sometimes waited too long to challenge something. People who knew me well started asking why I had not spoken up, because they could see that I disagreed and could tell I had a point of view.</p>
+<p>The truth was that I was trying to behave like the executive I thought I was supposed to become.</p>
+<p>The irony is that the further I moved into leadership, the more I temporarily edited out some of the qualities that had made me effective in the first place: my humor, my directness, my instinct to challenge, my willingness to say something slightly uncomfortable and, frankly, my personality.</p>
+<blockquote><strong>I did not need a new voice. I needed permission to use my own.</strong></blockquote>
+<h2 id="safety">Leaders need psychological safety too</h2>
+<p>We talk frequently about psychological safety as something leaders create for other people, and that is absolutely true. What we talk about less is that leaders need it too.</p>
+<p>The higher you go in an organization, the fewer people there are who will tell you that you are wrong, and that can become dangerous very quickly. Authority creates distortion. A casual comment can be interpreted as a direction, a question can sound like criticism, and an opinion can become a decision before you ever intended it to.</p>
+<p>If you are not careful, people gradually stop challenging you.</p>
+<p>I was fortunate to have leaders around me who created psychological safety for me as well. They wanted disagreement, allowed me to test ideas, gave me room to be wrong and did not expect me to arrive at every conversation with certainty. That trust gave me permission to stop performing an imagined version of executive leadership and to bring more of myself into the role.</p>
+<p>Over time, my personal and professional voices became much closer to the same voice. That made me a better executive.</p>
+<h3>Psychological safety is not a soft issue in compliance</h3>
+<p>This matters particularly in a compliance organization because psychological safety is often treated as a culture topic when I think it is also a control.</p>
+<p>A compliance function in which people are afraid to escalate bad news is a weak compliance function. An organization where junior employees do not challenge senior investigators is vulnerable. A business where employees hide concerns because they expect compliance to punish them for raising a problem is less safe, not more safe.</p>
+<p>The quality of a compliance program depends partly on whether information can travel upward without being distorted. People therefore need to believe they can say, “I think we missed something,” “I disagree,” “I don't understand this decision,” “This control isn't working,” “The customer experience is terrible,” “I think the model is wrong,” or simply, “I think you are wrong.”</p>
+<p>Those statements should not be viewed as threats to authority. They are evidence that the system is working. If the only information reaching senior leadership is information senior leadership wants to hear, the organization has a much bigger problem than culture.</p>
+<h2 id="power">Being gay also taught me something about power</h2>
+<p>For much of your life as a gay person, you become aware of whether the person across the table has the power to make your life easier or harder. Sometimes that assessment is justified and sometimes it is simply habit, but it gives you an unusual sensitivity to hierarchy.</p>
+<p>As a senior leader now, I try to remember that somebody speaking to me may experience the conversation very differently than I do. I may think we are having a casual discussion while they believe they are being evaluated. I may think I asked a question while they heard a criticism. I may make a joke and move on while they spend the rest of the day wondering whether there was something behind it.</p>
+<p>Leadership requires understanding that your intent and somebody else's experience are not necessarily the same thing. That does not mean becoming overly cautious or artificial. It means being conscious of the power you carry into a room.</p>
+<h3>Representation matters even when nobody talks about it</h3>
+<p>There is another part of being an openly gay senior executive that I probably underestimated for a long time: people notice.</p>
+<p>Younger LGBTQ+ employees notice. People who are not out notice. People trying to understand whether there is room in an organization for somebody like them notice.</p>
+<p>I do not walk into work every morning thinking of myself as “the gay CCO.” I am a CCO who happens to be gay. But visibility matters precisely because you can eventually reach a point where it becomes completely ordinary.</p>
+<p>I can talk about my husband in the same way another executive talks about their spouse. I can lead a major global function, disagree with the board, make difficult regulatory decisions, be funny, be serious, be wrong and be gay. None of those things needs to cancel out any of the others.</p>
+<p>For somebody early in their career, simply seeing that possibility can matter more than we sometimes realize.</p>
+<h2 id="people">The objective is not to build people who depend on you</h2>
+<p>My view of leadership has changed significantly as I have become more comfortable in the role.</p>
+<p>When I first built my leadership team, they needed me constantly. There were questions, approvals, escalations and frequent check-ins, and I probably micromanaged more than I would like to admit. Part of that came from being new at that level and wanting everything to go well, but part of it also came from believing that if I was accountable for everything, I needed to be involved in everything.</p>
+<p>Those two things are not the same.</p>
+<p>Over time, trust changed the model. My leaders began solving problems together, developing relationships across the organization, speaking directly with customers, banks and partners, and advocating for their teams without needing me to intervene simply because the person on the other side happened to be my peer.</p>
+<p>They challenged me. They made decisions I might have made differently. Often, their decisions were better.</p>
+<p>Watching that group develop into exceptional leaders has been one of the most satisfying experiences of my career. There is a slightly uncomfortable moment when you realize that, if you disappeared tomorrow, they would probably be fine.</p>
+<p>That is not evidence that you have become unnecessary. It is evidence that you did your job. Leadership is not about creating dependency. It is about increasing the number of people capable of leading without you.</p>
+<h2 id="wrong">Being wrong is part of senior leadership</h2>
+<p>One of the myths we create around executives is that confidence comes from certainty. Mine does not.</p>
+<p>I have made bad decisions. I have backed vendors that did not ultimately work because I underestimated the complexity of integration. I have made policy decisions that created business impact because I did not listen carefully enough to the feedback coming from the organization. I have handled meetings poorly and communicated badly.</p>
+<p>Members of my team have told me directly that something I said landed badly or that I handled a situation in a way that made people feel uncomfortable, and I am grateful they told me. That is the environment I want.</p>
+<p>If the people closest to me cannot say, “You handled that badly,” “I disagree,” or “You are wrong,” then I have not created trust. I have created hierarchy.</p>
+<p>There is a difference, and in compliance, hierarchy without challenge is dangerous.</p>
+<h3>Humor stopped being armor and became connection</h3>
+<p>One thing that has changed significantly is my relationship with humor. As a kid, humor often protected me. If I could make the joke first, I controlled the situation; if everyone was laughing, I felt safer.</p>
+<p>That instinct never completely disappeared, but today humor plays a different role. It helps me connect, makes serious subjects more accessible and reminds people that compliance does not have to communicate in the language of fear. It allows a room to relax enough to discuss something difficult.</p>
+<p>The difference is that I no longer feel I need to entertain the room in order to earn my place in it. That is a subtle shift, and it took me a long time to get there.</p>
+<h3>The most effective executive presence is not performance</h3>
+<p>Boards require presence. Regulators require credibility. Large teams require clarity, so there is inevitably an element of performance in executive leadership.</p>
+<p>But I no longer think executive presence means becoming somebody else. It means being able to bring the strongest version of yourself into a difficult environment. Presenting to a board is performance in the sense that communication must be deliberate. Explaining a complex financial-crime problem requires translation. Leading through a crisis requires composure because everyone is watching how you respond.</p>
+<p>None of that requires adopting a personality that does not belong to you. In fact, trying to do so is exhausting. The most effective executive presence I have developed came when I stopped spending so much energy trying to look like an executive.</p>
+<h2 id="one-person">What I hope people remember</h2>
+<p>If someone works with me for five minutes or five years, I hope they leave the interaction with something they did not have before.</p>
+<p>Maybe it is knowledge or greater confidence. Maybe it is motivation or a clearer understanding of why something matters. Maybe they disagree with me but feel that their argument was genuinely heard. Maybe it is simply the feeling that their presence mattered, that their question was worth asking and that their contribution was noticed.</p>
+<p>The title Chief Compliance Officer carries significant formal authority, but formal authority is probably the least interesting form of influence available to a leader.</p>
+<p>The more meaningful kind comes when people choose to trust you: when they tell you the bad news early, challenge your thinking, take risks in their own careers because they believe you will support them, and eventually become confident enough that they stop needing your approval.</p>
+<p>That, to me, is leadership.</p>
+<h2>Becoming one person</h2>
+<p>For a significant part of my life, there were different versions of me: the version for work, the version for family, the version for a room where I was not sure how people would react, the version trying to look like a senior executive, and the version that knew exactly what he thought but sometimes waited for permission to say it.</p>
+<p>Those versions have gradually collapsed into one person.</p>
+<p>I still read the room, and I probably always will, but I no longer believe the room should determine how much of myself I bring into it.</p>
+<p>Perhaps that is the biggest lesson being gay eventually taught me about leadership. For years, I assumed success would mean becoming the kind of executive people expected. It turned out to be almost the opposite. The better I became at the job, the less interested I became in performing somebody else's version of leadership.</p>
+<p>I did not need a different personality, a different voice or to become less gay, less funny, less direct or less myself in order to be credible. I needed the confidence to use the things I had spent years learning to manage: reading a room, recognizing discomfort, understanding power, using humor to connect, speaking when something does not feel right and creating enough safety that other people can do the same.</p>
+<blockquote><strong>What I needed was not a new voice. I needed permission to use my own.</strong><br/><br/>Eventually, I realized that permission had to come from me.</blockquote>
+<div class="article-end"><p><strong>Continue the conversation.</strong> For speaking, media or advisory enquiries, <a href="../contact.html">contact Micheal</a>.</p></div>
+</article>'''
+          pattern = r'(?s)<article class="prose">.*?</article>(?=</div></section><section class="section section-soft article-related">)'
+          s2, count = re.subn(pattern, new_body, s, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected to replace one essay body, replaced {count}')
+          old_nav = '<nav><a href="#human">The human responsibility</a><a href="#identity">Identity and leadership</a><a href="#voice">Finding my voice</a><a href="#people">Building people</a><a href="#wrong">Being wrong</a></nav>'
+          new_nav = '<nav><a href="#human">The human responsibility</a><a href="#identity">Reading the room</a><a href="#coming-out">Coming out</a><a href="#voice">Finding my voice</a><a href="#safety">Psychological safety</a><a href="#power">Power &amp; representation</a><a href="#people">Building leaders</a><a href="#wrong">Being wrong</a><a href="#one-person">Becoming one person</a></nav>'
+          if old_nav not in s2:
+              raise SystemExit('Expected old section navigation not found')
+          s2 = s2.replace(old_nav, new_nav)
+          s2 = s2.replace('<span>9 min read</span>', '<span>15 min read</span>', 1)
+          s2 = s2.replace('<meta property="article:modified_time" content="2026-07-28"/>', '<meta property="article:modified_time" content="2026-08-12"/>', 1)
+          s2 = s2.replace('"dateModified":"2026-07-28"', '"dateModified":"2026-08-12"', 1)
+          p.write_text(s2)
+          PY
+      - name: Verify preserved childhood images
+        run: |
+          grep -q 'micheal-childhood-performing.webp' articles/personal-side-of-being-a-cco.html
+          grep -q 'micheal-childhood-dingle.webp' articles/personal-side-of-being-a-cco.html
+          grep -q 'What I needed was not a new voice' articles/personal-side-of-being-a-cco.html
+      - name: Commit updated essay
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles/personal-side-of-being-a-cco.html
+          git diff --cached --quiet || git commit -m "Expand Finding My Voice leadership essay"
+          git push
