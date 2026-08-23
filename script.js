@@ -21,6 +21,20 @@
     document.head.appendChild(style);
   }
 
+  // Keep all internal homepage links aligned with the canonical root URL.
+  // This prevents rendered navigation from repeatedly surfacing /index.html
+  // as a duplicate homepage URL to search engines.
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    try {
+      const target = new URL(href, window.location.href);
+      if (target.origin === window.location.origin && target.pathname.endsWith('/index.html')) {
+        link.setAttribute('href', '/');
+      }
+    } catch (_) {}
+  });
+
   const toggle = document.querySelector('.mobile-toggle');
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
@@ -33,6 +47,7 @@
     home.dataset.homeLink = 'true';
     links.prepend(home);
   }
+  home.setAttribute('href', '/');
   if (location.pathname === '/' || location.pathname.endsWith('/index.html')) {
     home.setAttribute('aria-current', 'page');
   }
