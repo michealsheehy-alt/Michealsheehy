@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.michealsheehy.com/</loc><lastmod>2026-07-29</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/</loc><lastmod>2026-08-28</lastmod></url>
   <url><loc>https://www.michealsheehy.com/about.html</loc><lastmod>2026-07-29</lastmod></url>
-  <url><loc>https://www.michealsheehy.com/insights.html</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/insights.html</loc><lastmod>2026-08-28</lastmod></url>
   <url><loc>https://www.michealsheehy.com/adaptive-compliance.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/adaptive-compliance-manuscript.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/case-studies.html</loc><lastmod>2026-07-29</lastmod></url>
@@ -36,6 +36,8 @@
   <url><loc>https://www.michealsheehy.com/articles/the-code-is-real-the-identity-is-fake.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/personal-side-of-being-a-cco.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/being-funny-at-work.html</loc><lastmod>2026-08-18</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/articles/being-irish-in-america.html</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/articles/only-a-cat-grief-and-leadership.html</loc><lastmod>2026-08-28</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/the-loneliness-of-senior-accountability.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/the-vendor-decision-i-got-wrong.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/articles/your-leaders-should-eventually-stop-needing-you.html</loc><lastmod>2026-07-29</lastmod></url>
@@ -48,5 +50,5 @@
   <url><loc>https://www.michealsheehy.com/topics/adaptive-ai.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.michealsheehy.com/topics/global-payments-financial-crime.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.michealsheehy.com/topics/transformation-at-scale.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.michealsheehy.com/topics/leadership-identity.html</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michealsheehy.com/topics/leadership-identity.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
