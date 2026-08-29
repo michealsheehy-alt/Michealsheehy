@@ -268,6 +268,8 @@
 // Keep author/publisher entity markup consistent across every article, including
 // older pages whose static JSON-LD predates the canonical Person identifier.
 (() => {
+  if (!location.pathname.includes('/articles/')) return;
+
   const PERSON_ID = 'https://www.michealsheehy.com/about.html#person';
   const PERSON_URL = 'https://www.michealsheehy.com/about.html';
   const PERSON_NAME = 'Micheal Sheehy';
