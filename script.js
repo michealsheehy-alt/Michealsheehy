@@ -264,3 +264,51 @@
   youtubeApi.async = true;
   document.head.appendChild(youtubeApi);
 })();
+
+// Keep author/publisher entity markup consistent across every article, including
+// older pages whose static JSON-LD predates the canonical Person identifier.
+(() => {
+  const PERSON_ID = 'https://www.michealsheehy.com/about.html#person';
+  const PERSON_URL = 'https://www.michealsheehy.com/about.html';
+  const PERSON_NAME = 'Micheal Sheehy';
+  const WEBSITE_ID = 'https://www.michealsheehy.com/#website';
+  const canonical = document.querySelector('link[rel="canonical"]')?.href;
+
+  const personRef = (value = {}) => ({
+    ...(value && typeof value === 'object' && !Array.isArray(value) ? value : {}),
+    '@type': 'Person',
+    '@id': PERSON_ID,
+    name: PERSON_NAME,
+    url: PERSON_URL
+  });
+
+  const normalize = (node) => {
+    if (Array.isArray(node)) return node.map(normalize);
+    if (!node || typeof node !== 'object') return node;
+
+    Object.keys(node).forEach((key) => {
+      node[key] = normalize(node[key]);
+    });
+
+    const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
+    const isArticle = types.some((type) => ['Article', 'BlogPosting', 'NewsArticle'].includes(type));
+    if (isArticle) {
+      node.author = Array.isArray(node.author)
+        ? node.author.map((author) => personRef(author))
+        : personRef(node.author);
+      node.publisher = personRef(node.publisher);
+      if (!node.isPartOf) node.isPartOf = {'@id': WEBSITE_ID};
+      if (canonical && !node.mainEntityOfPage) {
+        node.mainEntityOfPage = {'@type': 'WebPage', '@id': canonical};
+      }
+    }
+    return node;
+  };
+
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    try {
+      const data = JSON.parse(script.textContent);
+      script.textContent = JSON.stringify(normalize(data));
+    } catch (_) {}
+  });
+})();
