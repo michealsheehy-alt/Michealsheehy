@@ -25,14 +25,26 @@ jobs:
             /tmp/tsa/20.png /tmp/tsa/21.png /tmp/tsa/22.png /tmp/tsa/23.png \
             /tmp/tsa/30.png /tmp/tsa/31.png /tmp/tsa/32.png /tmp/tsa/33.png \
             -tile 4x4 -geometry 418x235+0+0 /tmp/tsa/full.png
-          convert /tmp/tsa/full.png -quality 92 assets/insights/tsa-virgo-full.jpg
-          convert /tmp/tsa/full.png -resize '1200x630^' -gravity center -extent 1200x630 -quality 92 assets/insights/tsa-virgo-og.jpg
+          convert /tmp/tsa/full.png -quality 94 assets/insights/tsa-virgo-full.jpg
+          convert /tmp/tsa/full.png -resize '1200x630^' -gravity center -extent 1200x630 -quality 94 assets/insights/tsa-virgo-og.jpg
           file assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg
           identify assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg
-      - name: Commit raster images
+      - name: Point article at full-resolution raster
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('articles/tsa-tray-test.html')
+          s = p.read_text()
+          old = '<img src="../assets/insights/tsa-virgo-og.jpg" alt="Illustration of Micheal Sheehy stacking TSA trays while a bored TSA officer looks on" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async"/>'
+          new = '<img src="../assets/insights/tsa-virgo-full.jpg" alt="Illustration of Micheal Sheehy stacking TSA trays while a bored TSA officer looks on" width="1672" height="940" loading="eager" fetchpriority="high" decoding="async"/>'
+          if old not in s:
+              raise SystemExit('Expected TSA image tag not found')
+          p.write_text(s.replace(old, new, 1))
+          PY
+      - name: Commit raster images and article
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg
-          git commit -m 'Rebuild TSA hero and LinkedIn preview as real JPEGs' || exit 0
+          git add assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg articles/tsa-tray-test.html
+          git commit -m 'Fix TSA article image quality and LinkedIn preview' || exit 0
           git push
