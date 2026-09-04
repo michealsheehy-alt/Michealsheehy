@@ -1,0 +1,38 @@
+name: Rebuild TSA raster images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/rebuild-tsa-raster.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build single raster from approved tiles
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq imagemagick librsvg2-bin
+          mkdir -p /tmp/tsa
+          for t in 00 01 02 03 10 11 12 13 20 21 22 23 30 31 32 33; do
+            rsvg-convert -w 418 -h 235 "assets/insights/tsa-tile-${t}.svg" -o "/tmp/tsa/${t}.png"
+          done
+          montage \
+            /tmp/tsa/00.png /tmp/tsa/01.png /tmp/tsa/02.png /tmp/tsa/03.png \
+            /tmp/tsa/10.png /tmp/tsa/11.png /tmp/tsa/12.png /tmp/tsa/13.png \
+            /tmp/tsa/20.png /tmp/tsa/21.png /tmp/tsa/22.png /tmp/tsa/23.png \
+            /tmp/tsa/30.png /tmp/tsa/31.png /tmp/tsa/32.png /tmp/tsa/33.png \
+            -tile 4x4 -geometry 418x235+0+0 /tmp/tsa/full.png
+          convert /tmp/tsa/full.png -quality 92 assets/insights/tsa-virgo-full.jpg
+          convert /tmp/tsa/full.png -resize '1200x630^' -gravity center -extent 1200x630 -quality 92 assets/insights/tsa-virgo-og.jpg
+          file assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg
+          identify assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg
+      - name: Commit raster images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/insights/tsa-virgo-full.jpg assets/insights/tsa-virgo-og.jpg
+          git commit -m 'Rebuild TSA hero and LinkedIn preview as real JPEGs' || exit 0
+          git push
