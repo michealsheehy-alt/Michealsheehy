@@ -1,0 +1,37 @@
+name: Build Only a Cat social images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/build-only-a-cat-images.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build article hero and LinkedIn image
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq imagemagick
+          mkdir -p /tmp/cat
+
+          convert assets/insights/bobby-with-johnny.jpg -auto-orient -resize '534x900^' -gravity center -extent 534x900 /tmp/cat/johnny.jpg
+          convert assets/insights/bobby-portrait.jpg -auto-orient -resize '534x900^' -gravity center -extent 534x900 /tmp/cat/bobby.jpg
+          convert assets/insights/micheal-with-bobby.jpg -auto-orient -resize '532x900^' -gravity center -extent 532x900 /tmp/cat/micheal.jpg
+          convert +append /tmp/cat/johnny.jpg /tmp/cat/bobby.jpg /tmp/cat/micheal.jpg -quality 92 assets/insights/only-a-cat-hero.jpg
+
+          convert assets/insights/bobby-with-johnny.jpg -auto-orient -resize '400x630^' -gravity center -extent 400x630 /tmp/cat/johnny-og.jpg
+          convert assets/insights/bobby-portrait.jpg -auto-orient -resize '400x630^' -gravity center -extent 400x630 /tmp/cat/bobby-og.jpg
+          convert assets/insights/micheal-with-bobby.jpg -auto-orient -resize '400x630^' -gravity center -extent 400x630 /tmp/cat/micheal-og.jpg
+          convert +append /tmp/cat/johnny-og.jpg /tmp/cat/bobby-og.jpg /tmp/cat/micheal-og.jpg -quality 92 assets/insights/only-a-cat-og.jpg
+
+          identify assets/insights/only-a-cat-hero.jpg assets/insights/only-a-cat-og.jpg
+      - name: Commit generated images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/insights/only-a-cat-hero.jpg assets/insights/only-a-cat-og.jpg
+          git commit -m 'Add Only a Cat hero and social preview images' || exit 0
+          git push
