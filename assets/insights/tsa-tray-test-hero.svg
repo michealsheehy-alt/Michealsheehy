@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Put the tray back</title>
+  <desc id="desc">Editorial illustration of airport security trays, a conveyor belt and a bold reminder to return the tray.</desc>
+  <rect width="1600" height="900" fill="#f4f1ea"/>
+  <rect x="72" y="72" width="1456" height="756" rx="42" fill="#ffffff" stroke="#d7ddd8" stroke-width="4"/>
+
+  <g transform="translate(118 126)">
+    <text x="0" y="30" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="5" fill="#67745f">LEADERSHIP &amp; IDENTITY · AIRPORT SECURITY</text>
+    <text x="0" y="140" font-family="Georgia, 'Times New Roman', serif" font-size="92" fill="#17211d">The TSA Tray Test</text>
+    <text x="0" y="220" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#17211d">A COMPLETELY UNSCIENTIFIC THEORY OF LEADERSHIP</text>
+  </g>
+
+  <g transform="translate(118 410)">
+    <rect x="0" y="0" width="650" height="270" rx="28" fill="#192720"/>
+    <rect x="34" y="34" width="14" height="202" rx="7" fill="#c5db49"/>
+    <text x="82" y="105" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="900" fill="#ffffff">PUT THE</text>
+    <text x="82" y="170" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="900" fill="#ffffff">TRAY BACK.</text>
+    <text x="82" y="220" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#d5ddd8">It is not an escape room.</text>
+  </g>
+
+  <g transform="translate(845 340)">
+    <rect x="0" y="300" width="585" height="54" rx="18" fill="#17211d"/>
+    <rect x="45" y="354" width="34" height="116" rx="12" fill="#17211d"/>
+    <rect x="506" y="354" width="34" height="116" rx="12" fill="#17211d"/>
+
+    <g fill="#e5ebe4" stroke="#17211d" stroke-width="7">
+      <rect x="52" y="235" width="340" height="72" rx="18" transform="rotate(-3 52 235)"/>
+      <rect x="88" y="172" width="340" height="72" rx="18" transform="rotate(2 88 172)"/>
+      <rect x="120" y="108" width="340" height="72" rx="18" transform="rotate(-2 120 108)"/>
+      <rect x="155" y="44" width="340" height="72" rx="18" transform="rotate(3 155 44)"/>
+    </g>
+
+    <g fill="none" stroke="#c5db49" stroke-width="14" stroke-linecap="round">
+      <path d="M470 18 C535 8 562 34 576 76"/>
+      <path d="M576 76 l-5 -32"/>
+      <path d="M576 76 l-29 -13"/>
+    </g>
+    <text x="405" y="12" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#67745f">GROUP THREE ENERGY</text>
+  </g>
+
+  <g transform="translate(118 754)">
+    <circle cx="16" cy="16" r="16" fill="#c5db49"/>
+    <text x="44" y="24" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#66716b">Ownership is good. Quietly doing everyone else’s job forever is not.</text>
+  </g>
+</svg>
