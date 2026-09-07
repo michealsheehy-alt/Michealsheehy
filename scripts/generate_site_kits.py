@@ -470,7 +470,7 @@ def build_media_kit():
     )
     add_callout(doc, "micheal@michealsheehy.com  ·  +1 (818) 397-8890  ·  www.michealsheehy.com")
     add_bullets(doc, [
-        "LinkedIn: linkedin.com/in/micheal-s-88479045",
+        "LinkedIn: linkedin.com/in/micheal-sheehy",
         "Speaking: michealsheehy.com/speaking.html",
         "Media: michealsheehy.com/media.html",
         "Adaptive Compliance: michealsheehy.com/adaptive-compliance.html",

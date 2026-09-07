@@ -1428,7 +1428,7 @@ def build_toolkit():
         ["READ", "CONTACT"],
         [
             ("michealsheehy.com/adaptive-compliance.html", "micheal@michealsheehy.com  ·  +1 (818) 397-8890"),
-            ("michealsheehy.com/tools.html", "linkedin.com/in/micheal-s-88479045"),
+            ("michealsheehy.com/tools.html", "linkedin.com/in/micheal-sheehy"),
         ],
         [4680, 4680],
         font_size=9.5,
