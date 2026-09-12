@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.michealsheehy.com/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://www.michealsheehy.com/about.html</loc><lastmod>2026-07-29</lastmod></url>
-  <url><loc>https://www.michealsheehy.com/insights.html</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://www.michealsheehy.com/insights.html</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://www.michealsheehy.com/adaptive-compliance.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/adaptive-compliance-manuscript.html</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://www.michealsheehy.com/case-studies.html</loc><lastmod>2026-07-29</lastmod></url>
@@ -50,5 +50,6 @@
   <url><loc>https://www.michealsheehy.com/topics/adaptive-ai.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.michealsheehy.com/topics/global-payments-financial-crime.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.michealsheehy.com/topics/transformation-at-scale.html</loc><lastmod>2026-07-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.michealsheehy.com/topics/leadership-identity.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michealsheehy.com/topics/leadership-identity.html</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michealsheehy.com/articles/shopping-cart-test.html</loc><lastmod>2026-09-12</lastmod></url>
 </urlset>
